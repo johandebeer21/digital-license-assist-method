@@ -9,55 +9,113 @@
     font-family: Arial, sans-serif;
     background: #f9fafb;
     margin: 0;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
     color: #222;
   }
-  h1 {
+
+  header img {
+    height: 70px;
     margin-bottom: 1rem;
-    color: #1a202c;
   }
+
+  h1 {
+    margin-bottom: 0.5rem;
+    color: #1a202c;
+    font-size: 1.8rem;
+  }
+
   p {
     margin-bottom: 2rem;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #555;
+    padding: 0 1rem;
   }
+
   .button-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 400px;
+    max-width: 100%;
     margin: 0 auto;
   }
+
   a.button {
     background-color: #2b6cb0;
     color: white;
     padding: 1rem;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     border-radius: 6px;
     box-shadow: 0 4px 6px rgba(43, 108, 176, 0.4);
     transition: background-color 0.3s ease;
+    margin: 0 1rem;
   }
+
   a.button:hover {
     background-color: #2c5282;
   }
+
+  .whatsapp-button {
+    background-color: #25D366;
+  }
+
+  .testimonial {
+    margin-top: 2.5rem;
+    padding: 1.2rem;
+    background-color: #edf2f7;
+    border-radius: 10px;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
   footer {
     margin-top: 3rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #888;
+  }
+
+  /* Responsive tweaks */
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+    a.button {
+      font-size: 1.1rem;
+    }
+    .testimonial {
+      max-width: 600px;
+      font-size: 1.05rem;
+    }
   }
 </style>
 </head>
 <body>
+  <header>
+    <img src="https://drive.google.com/uc?export=view&id=1ng94HZlpEGJnliiuzxVjXdHmdWqj566z" alt="Logo" />
+  </header>
   <h1>Firearm License Application Portal</h1>
   <p>Please select the application you want to apply for:</p>
+
   <div class="button-container">
     <a href="https://tally.so/r/wogW1b" target="_blank" rel="noopener" class="button">Section 13 – Firearm License for Self-Defense</a>
     <a href="https://tally.so/r/w82OJA" target="_blank" rel="noopener" class="button">Section 15 – Firearm License (Occasional Hunting & Shooting)</a>
     <a href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Hunter Firearm</a>
     <a href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Sports Shooter Firearm</a>
+    <a href="https://wa.me/27785184118" target="_blank" rel="noopener" class="button whatsapp-button">📱 Chat with Johan on WhatsApp</a>
   </div>
+
+  <div class="testimonial">
+    “Thank you so much Johan, I really appreciate your professionalism and I find the documents very good.<br><br>
+    I look forward to working with you again in the future.”<br><br>
+    — Nhlanhla Zikalala
+  </div>
+
   <footer>
     &copy; 2025 Johan de Beer Firearm License Assistance
   </footer>
