@@ -1,215 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Firearm License Application Portal</title>
-<!-- Google Fonts: Poppins -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-<style>
-  /* Reset */
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Poppins', Arial, sans-serif;
-    background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
-    margin: 0;
-    padding: 2rem 1rem;
-    color: #4B5563;
-    text-align: center;
-    overflow-x: hidden;
-  }
-
-  /* Container for content */
-  .container {
-    max-width: 480px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 12px;
-    padding: 2rem 2rem 3rem;
-    box-shadow: 0 12px 24px rgba(31, 41, 55, 0.12);
-    animation: fadeInUp 0.8s ease forwards;
-    opacity: 0;
-  }
-
-  /* Logo */
-  img.logo {
-    height: 90px;
-    margin-bottom: 1.5rem;
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
-  }
-
-  h1 {
-    font-weight: 600;
-    font-size: 1.9rem;
-    color: #1F2937;
-    margin-bottom: 0.5rem;
-  }
-
-  p.intro {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: #6B7280;
-  }
-
-  /* Buttons */
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  a.button {
-    background-color: #3B82F6;
-    color: white;
-    padding: 1.15rem 1.5rem;
-    font-size: 1.15rem;
-    font-weight: 600;
-    border-radius: 8px;
-    text-decoration: none;
-    box-shadow: 0 8px 16px rgba(59,130,246,0.3);
-    transition: all 0.3s ease;
-    display: inline-block;
-    user-select: none;
-  }
-  a.button:hover,
-  a.button:focus {
-    background-color: #2563EB;
-    box-shadow: 0 12px 20px rgba(37, 99, 235, 0.5);
-    transform: translateY(-3px) scale(1.03);
-  }
-
-  /* WhatsApp button special */
-  a.whatsapp-button {
-    background-color: #25D366;
-    box-shadow: 0 8px 18px rgba(37, 211, 102, 0.5);
-    font-size: 1.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    font-weight: 700;
-    animation: bounce 2.5s infinite;
-  }
-  a.whatsapp-button:hover,
-  a.whatsapp-button:focus {
-    background-color: #1ebe57;
-    box-shadow: 0 14px 28px rgba(30, 190, 87, 0.7);
-    transform: translateY(-4px) scale(1.05);
-  }
-
-  /* Testimonial */
-  .testimonial {
-    background: #F3F4F6;
-    border-left: 6px solid #3B82F6;
-    padding: 1rem 1.5rem;
-    font-style: italic;
-    color: #374151;
-    font-size: 1rem;
-    border-radius: 8px;
-    max-width: 460px;
-    margin: 0 auto;
-    box-shadow: 0 6px 12px rgba(59,130,246,0.1);
-    opacity: 0;
-    animation: fadeIn 1.5s ease 1s forwards;
-  }
-  .testimonial strong {
-    display: block;
-    margin-top: 0.7rem;
-    color: #1F2937;
-    font-weight: 600;
-    font-style: normal;
-  }
-
-  /* Footer */
-  footer {
-    margin-top: 3rem;
-    font-size: 0.9rem;
-    color: #9CA3AF;
-  }
-
-  /* Animations */
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(15px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-8px);
-    }
-  }
-
-  /* Responsive */
-  @media (max-width: 480px) {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Firearm License Application Portal</title>
+  <style>
     body {
-      padding: 1rem 0.5rem;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f1f5f9, #dbeafe);
+      color: #1a202c;
+      text-align: center;
+      padding: 2rem;
     }
-    .container {
-      padding: 1.5rem 1rem 2.5rem;
-      max-width: 95%;
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
     }
-    a.button {
-      font-size: 1rem;
-      padding: 1rem 1.2rem;
+
+    header img {
+      width: 160px;
+      height: auto;
+      margin-bottom: 1rem;
     }
-    a.whatsapp-button {
+
+    h1 {
+      margin: 0.5rem 0;
+      font-size: 2rem;
+    }
+
+    p {
       font-size: 1.1rem;
-      padding: 1rem;
+      color: #4a5568;
     }
-  }
-</style>
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 2rem auto;
+    }
+
+    a.button {
+      display: block;
+      padding: 1rem;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .testimonial {
+      background-color: #fff;
+      border-left: 4px solid #2563eb;
+      padding: 1rem;
+      margin-top: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-style: italic;
+      color: #333;
+    }
+
+    .testimonial strong {
+      display: block;
+      margin-top: 0.5rem;
+      font-style: normal;
+      color: #1a202c;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #718096;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .button-container a {
+        font-size: 1rem;
+        padding: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="container" role="main" aria-label="Firearm License Application Portal">
-    <img
-      src="https://github.com/johandebeer21/firearm-application-landing/blob/main/JDB%20LA%20TRANSPARENT.png?raw=true"
-      alt="Johan de Beer Firearm License Assistance Logo"
-      class="logo"
-      loading="lazy"
-    />
+
+  <header>
+    <img src="https://github.com/johandebeer21/firearm-application-landing/blob/main/JDB%20LA%20TRANSPARENT.png?raw=true" alt="Johan de Beer Logo" />
     <h1>Firearm License Application Portal</h1>
-    <p class="intro">Choose the firearm license application you want to apply for:</p>
-    <div class="button-container" role="navigation" aria-label="Application links">
-      <a href="https://tally.so/r/wogW1b" target="_blank" rel="noopener" class="button" tabindex="0">
-        Section 13 – Firearm License for Self-Defense
-      </a>
-      <a href="https://tally.so/r/w82OJA" target="_blank" rel="noopener" class="button" tabindex="0">
-        Section 15 – Firearm License (Occasional Hunting & Shooting)
-      </a>
-      <a href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener" class="button" tabindex="0">
-        Section 16 – Dedicated Hunter Firearm
-      </a>
-      <a href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener" class="button" tabindex="0">
-        Section 16 – Dedicated Sports Shooter Firearm
-      </a>
-      <a href="https://wa.me/27785184118" target="_blank" rel="noopener" class="button whatsapp-button" tabindex="0" aria-label="Chat with Johan de Beer on WhatsApp">
-        📱 Chat with us on WhatsApp
-      </a>
-    </div>
-    <blockquote class="testimonial" aria-live="polite">
-      "Thank you so much Johan, I really appreciate your professionalism and I find the documents very good.<br/>
-      <strong>- Nhlanhla Zikalala</strong>
-    </blockquote>
+    <p>Select the type of firearm license you want to apply for:</p>
+  </header>
+
+  <div class="button-container">
+    <a href="https://tally.so/r/wogW1b" target="_blank" class="button">Section 13 – Firearm License for Self-Defense</a>
+    <a href="https://tally.so/r/w82OJA" target="_blank" class="button">Section 15 – Occasional Hunting & Sport Shooting</a>
+    <a href="https://tally.so/r/wMPoX0" target="_blank" class="button">Section 16 – Dedicated Hunter Firearm</a>
+    <a href="https://tally.so/r/mJG5Oz" target="_blank" class="button">Section 16 – Dedicated Sports Shooter Firearm</a>
+    <a href="https://tally.so/r/wA5D9W" target="_blank" class="button">Firearm Competency Application Form</a>
+    <a href="https://tally.so/r/wkp9Qo" target="_blank" class="button">Section 20 – Business Use Firearm License</a>
+    <a href="https://wa.me/27785184118" target="_blank" class="button">📱 Chat with us on WhatsApp</a>
   </div>
-  <footer>&copy; 2025 Johan de Beer Firearm License Assistance</footer>
+
+  <div class="testimonial">
+    “Thank you so much Johan, I really appreciate your professionalism and I find the documents very good.  
+    I look forward to working with you again in the future.”
+    <strong>– Nhlanhla Zikalala</strong>
+  </div>
+
+  <footer>
+    &copy; 2025 Johan de Beer Firearm License Assistance • All rights reserved.
+  </footer>
+
 </body>
 </html>
