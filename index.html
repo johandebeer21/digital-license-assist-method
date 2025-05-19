@@ -2,64 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Johan de Beer Firearm License Assistance</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firearm License Application Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to right, #edf2f7, #f7fafc);
-      color: #1a202c;
+      color: #2d3748;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 2rem 1rem;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    header img {
+    .logo {
       max-width: 200px;
-      height: auto;
-      margin-bottom: 1rem;
-      animation: fadeIn 1.2s ease-in-out;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 1s ease-in;
     }
 
     h1 {
       font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      animation: fadeInUp 1s ease-out;
     }
 
-    p.subtitle {
+    p {
       font-size: 1.1rem;
       color: #4a5568;
       margin-bottom: 2rem;
+      animation: fadeInUp 1.2s ease-out;
     }
 
     .button-container {
-      display: grid;
+      display: flex;
+      flex-direction: column;
       gap: 1rem;
-      max-width: 500px;
       width: 100%;
-      animation: fadeIn 1.5s ease-in-out;
+      max-width: 400px;
+      animation: fadeInUp 1.4s ease-out;
     }
 
     a.button {
-      display: block;
       background-color: #2b6cb0;
       color: #fff;
+      text-decoration: none;
       padding: 1rem;
       border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(43, 108, 176, 0.3);
+      transition: all 0.3s ease;
       text-align: center;
+      font-weight: 500;
     }
 
     a.button:hover {
@@ -71,88 +67,86 @@
       margin-top: 3rem;
       max-width: 600px;
       font-style: italic;
+      font-size: 1rem;
       color: #2d3748;
-      animation: fadeIn 2s ease-in-out;
+      animation: fadeInUp 1.6s ease-out;
     }
 
     .testimonial strong {
       display: block;
       margin-top: 0.5rem;
       font-style: normal;
-      color: #1a202c;
+      color: #4a5568;
     }
 
     .whatsapp-button {
-      margin-top: 2rem;
-      background-color: #25D366;
-      color: #fff;
-      padding: 1rem;
-      border-radius: 8px;
+      margin-top: 2.5rem;
+      background-color: #25d366;
+      color: white;
+      padding: 0.9rem 1.2rem;
+      border-radius: 50px;
       text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(37, 211, 102, 0.4);
+      display: inline-block;
       animation: pulse 2s infinite;
-    }
-
-    .whatsapp-button:hover {
-      transform: scale(1.05);
-      background-color: #1ebc59;
     }
 
     footer {
       margin-top: 4rem;
       font-size: 0.85rem;
-      color: #718096;
+      color: #a0aec0;
+      text-align: center;
     }
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
-      70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
-
+    /* Animations */
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.5rem;
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
       }
-
-      .button-container {
-        grid-template-columns: 1fr;
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://github.com/johandebeer21/firearm-application-landing/blob/main/JDB%20LA%20TRANSPARENT.png?raw=true" alt="Johan de Beer Logo" />
-    <h1>Firearm License Application Portal</h1>
-    <p class="subtitle">Get your documentation done fast & professionally with our Digital License Assist Method™</p>
-  </header>
+
+  <img src="https://github.com/johandebeer21/firearm-application-landing/blob/main/JDB%20LA%20TRANSPARENT.png?raw=true" alt="Johan de Beer Logo" class="logo" />
+
+  <h1>Firearm License Application Portal</h1>
+  <p>Select the application you need below 👇</p>
 
   <div class="button-container">
-    <a href="https://tally.so/r/wogW1b" target="_blank" rel="noopener" class="button">Section 13 – Self-Defense License</a>
-    <a href="https://tally.so/r/w82OJA" target="_blank" rel="noopener" class="button">Section 15 – Occasional Hunting & Shooting</a>
-    <a href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Hunter</a>
-    <a href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Sports Shooter</a>
-    <a href="https://tally.so/r/wA5D9W" target="_blank" rel="noopener" class="button">Competency Application – Handgun Only</a>
-    <a href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener" class="button">Competency Application – Multiple Firearms</a>
+    <a class="button" href="https://tally.so/r/wogW1b" target="_blank">Section 13 – Firearm License for Self-Defence</a>
+    <a class="button" href="https://tally.so/r/w82OJA" target="_blank">Section 15 – Firearm License (Occasional Hunting & Shooting)</a>
+    <a class="button" href="https://tally.so/r/wMPoX0" target="_blank">Section 16 – Dedicated Hunter Firearm</a>
+    <a class="button" href="https://tally.so/r/mJG5Oz" target="_blank">Section 16 – Dedicated Sports Shooter Firearm</a>
+    <a class="button" href="https://tally.so/r/wA5D9W" target="_blank">Competency Application Form</a>
+    <a class="button" href="https://tally.so/r/wkp9Qo" target="_blank">Section 20 – Firearm License Application (Business Use)</a>
   </div>
 
   <div class="testimonial">
-    “Thank you so much Johan, I really appreciate your professionalism and I find the documents very good. I look forward to working with you again in the future.”
+    “Thank you so much Johan, I really appreciate your professionalism and I find the documents very good.
     <strong>– Nhlanhla Zikalala</strong>
   </div>
 
-  <a href="https://wa.me/27785184118" target="_blank" class="whatsapp-button">📱 Chat with us on WhatsApp</a>
+  <a href="https://wa.me/27785184118" class="whatsapp-button" target="_blank">💬 Chat with us on WhatsApp</a>
 
   <footer>
-    &copy; 2025 Johan de Beer Firearm License Assistance. All rights reserved.
+    &copy; 2025 Johan de Beer – Firearm License Assistance | Powered by the Digital License Assist Method™
   </footer>
 </body>
 </html>
