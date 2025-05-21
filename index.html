@@ -7,52 +7,42 @@
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #e6f0ff; /* nice light blue */
+    background: #e6f0ff; /* light blue */
     margin: 0;
-    padding: 2rem 1rem;
+    padding: 2rem;
     text-align: center;
     color: #222;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
   }
   header img {
     max-width: 200px;
-    margin: 0 auto 1rem auto;
-    display: block;
-  }
-  header h2 {
-    font-weight: 600;
-    color: #2c5282;
-    margin-bottom: 0.25rem;
-  }
-  header p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: #4a5568;
-    font-style: italic;
-  }
-  h1 {
-    color: #1a202c;
     margin-bottom: 1rem;
   }
-  p.instructions {
-    font-size: 1.1rem;
+  h1 {
+    margin-bottom: 0.5rem;
+    color: #1a202c;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #2c5282;
+    font-weight: 600;
+  }
+  p {
     margin-bottom: 2rem;
+    font-size: 1.1rem;
     color: #555;
   }
   .button-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 420px;
-    margin: 0 auto;
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
   }
   a.button {
     background-color: #2b6cb0;
     color: white;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     text-decoration: none;
     font-size: 1.1rem;
     border-radius: 6px;
@@ -62,84 +52,72 @@
   a.button:hover {
     background-color: #2c5282;
   }
-
-  /* WhatsApp Button */
-  .whatsapp-button {
-    display: inline-block;
-    background-color: #25d366;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(37, 211, 102, 0.5);
-    animation: pulse 3s infinite;
-    transition: background-color 0.3s ease;
-    margin: 2rem auto 0 auto;
-    max-width: 200px;
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 2.5s infinite;
+    cursor: pointer;
+    z-index: 1000;
   }
-  .whatsapp-button:hover {
-    background-color: #1ebe57;
+  .whatsapp-btn img {
+    width: 30px;
+    height: 30px;
   }
   @keyframes pulse {
-    0%, 100% {
-      box-shadow: 0 0 10px #25d366;
-    }
-    50% {
-      box-shadow: 0 0 20px #25d366;
-    }
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
   }
-
   footer {
-    margin-top: auto;
+    margin-top: 3rem;
     font-size: 0.9rem;
-    color: #555;
-    padding: 1.5rem 0 1rem 0;
+    color: #888;
   }
-
   /* Responsive */
   @media (max-width: 480px) {
     .button-container {
-      max-width: 90vw;
-    }
-    .whatsapp-button {
-      max-width: 90vw;
-      padding: 1rem;
-      font-size: 1rem;
-    }
-    header img {
-      max-width: 150px;
+      max-width: 100%;
+      padding: 0 1rem;
     }
   }
 </style>
 </head>
 <body>
-<header>
-  <img src="https://github.com/johandebeer21/firearm-application-landing/raw/main/JDB%20LA%20TRANSPARENT.png" alt="Johan de Beer Logo" />
-  <h2>Proudly powered by our exclusive Digital License Assist Method™</h2>
-  <p>Fast-tracking your firearm license application with accuracy, support, and professionalism.</p>
-</header>
+  <header>
+    <img src="https://github.com/johandebeer21/firearm-application-landing/blob/main/JDB%20LA%20TRANSPARENT.png?raw=true" alt="Logo" />
+  </header>
 
-<h1>Firearm License Application Portal</h1>
-<p class="instructions">Please select the application you want to apply for:</p>
+  <h1>Firearm License Application Portal</h1>
 
-<div class="button-container">
-  <a href="https://tally.so/r/wogW1b" target="_blank" rel="noopener" class="button">Section 13 – Firearm License for Self-Defense</a>
-  <a href="https://tally.so/r/w82OJA" target="_blank" rel="noopener" class="button">Section 15 – Firearm License (Occasional Hunting & Shooting)</a>
-  <a href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Hunter Firearm</a>
-  <a href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Sports Shooter Firearm</a>
-  <a href="https://tally.so/r/wA5D9W" target="_blank" rel="noopener" class="button">Competency Application Form</a>
-  <a href="https://tally.so/r/wayeoZ" target="_blank" rel="noopener" class="button">Firearm Renewal Application</a>
-  <a href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener" class="button">Section 20 - Firearm License Application (Business Use)</a>
-</div>
+  <h2>Proudly powered by our exclusive Digital License Assist Method™, fast-tracking your firearm license application with accuracy, support, and professionalism.</h2>
 
-<a href="https://wa.me/2785184118" target="_blank" rel="noopener" class="whatsapp-button" aria-label="Chat on WhatsApp">
-  📲 WhatsApp Us
-</a>
+  <p>Please select the application you want to apply for:</p>
 
-<footer>
-  &copy; 2025 Johan de Beer – Firearm License Assistance | Powered by the Digital License Assist Method™
-</footer>
+  <div class="button-container">
+    <a href="https://tally.so/r/wogW1b" target="_blank" rel="noopener" class="button">Section 13 – Firearm License for Self-Defense</a>
+    <a href="https://tally.so/r/w82OJA" target="_blank" rel="noopener" class="button">Section 15 – Firearm License (Occasional Hunting & Shooting)</a>
+    <a href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Hunter Firearm</a>
+    <a href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Sports Shooter Firearm</a>
+    <a href="https://tally.so/r/wA5D9W" target="_blank" rel="noopener" class="button">Competency Application Form</a>
+    <a href="https://tally.so/r/wayeoZ" target="_blank" rel="noopener" class="button">Firearm Renewal Application</a>
+    <a href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener" class="button">Section 20 – Firearm License Application (Business Use)</a>
+  </div>
+
+  <a href="https://wa.me/2785184118" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="WhatsApp Chat">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <footer>
+    &copy; 2025 Johan de Beer – Firearm License Assistance | Powered by the Digital License Assist Method™
+  </footer>
 </body>
 </html>
