@@ -1,131 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Firearm License Application Portal</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #e6f0fa;
-    margin: 0;
-    padding: 2rem;
-    text-align: center;
-    color: #222;
-  }
-  h1 {
-    margin-bottom: 1rem;
-    color: #1a202c;
-  }
-  p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    color: #555;
-  }
-  .highlight-message {
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #3182ce;
-    max-width: 600px;
-    margin: 0 auto 0.5rem;
-  }
-  .subheading {
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #2c5282;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-  }
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  a.button {
-    background-color: #2b6cb0;
-    color: white;
-    padding: 1rem;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(43, 108, 176, 0.4);
-    transition: background-color 0.3s ease;
-  }
-  a.button:hover {
-    background-color: #2c5282;
-  }
-  #whatsapp-button {
-    display: inline-block;
-    background-color: #25d366;
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(37, 211, 102, 0.5);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: 2rem auto 0;
-    max-width: 200px;
-  }
-  #whatsapp-button:hover {
-    background-color: #1ebe56;
-    transform: scale(1.05);
-  }
-  footer {
-    margin-top: 3rem;
-    font-size: 0.9rem;
-    color: #888;
-  }
-  @media (max-width: 480px) {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital License Assist Method™</title>
+  <style>
     body {
-      padding: 1rem;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0fa;
+      color: #333;
+      text-align: center;
     }
+
+    header {
+      padding: 20px;
+    }
+
+    header img {
+      max-width: 220px;
+      height: auto;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #004080;
+    }
+
     .button-container {
-      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
     }
-    a.button, #whatsapp-button {
-      font-size: 1rem;
-      padding: 0.8rem;
-      max-width: 100%;
+
+    .form-button {
+      background-color: #004080;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
-    .highlight-message, .subheading {
-      font-size: 1rem;
-      max-width: 100%;
-      margin-bottom: 1rem;
+
+    .form-button:hover {
+      background-color: #0059b3;
+      transform: translateY(-2px);
     }
-  }
-</style>
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      animation: pulse 2.5s infinite;
+      text-decoration: none;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+  </style>
 </head>
 <body>
-  <img src="https://github.com/johandebeer21/firearm-application-landing/blob/main/JDB%20LA%20TRANSPARENT.png?raw=true" alt="Johan de Beer Logo" style="max-width: 180px; margin-bottom: 2rem;" />
 
-  <h1>Firearm License Application Portal</h1>
-
-  <p class="highlight-message">
-    Proudly powered by our exclusive <strong>Digital License Assist Method™</strong> — fast-tracking your firearm license application with accuracy, support, and professionalism.
-  </p>
-  <p class="subheading">
-    Please select the application you want to apply for below.
-  </p>
+  <header>
+    <img src="https://github.com/johandebeer21/firearm-application-landing/blob/main/JDB%20LA%20TRANSPARENT.png?raw=true" alt="Logo" />
+    <h1>Fast-track your firearm license with our expert assistance!</h1>
+    <h2>Please select the application you need below:</h2>
+  </header>
 
   <div class="button-container">
-    <a href="https://tally.so/r/wogW1b" target="_blank" rel="noopener" class="button">Section 13 – Firearm License for Self-Defense</a>
-    <a href="https://tally.so/r/w82OJA" target="_blank" rel="noopener" class="button">Section 15 – Firearm License (Occasional Hunting & Shooting)</a>
-    <a href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Hunter Firearm</a>
-    <a href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Sports Shooter Firearm</a>
-    <a href="https://tally.so/r/wA5D9W" target="_blank" rel="noopener" class="button">Competency Application Form</a>
-    <a href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener" class="button">Section 20 - Firearm License Application (Business Use)</a>
+    <a class="form-button" href="https://tally.so/r/3q5kVM" target="_blank">Section 13 – Firearm License for Self-Defense</a>
+    <a class="form-button" href="https://tally.so/r/w4Wz5e" target="_blank">Section 15 – Firearm License (Occasional Hunting & Shooting)</a>
+    <a class="form-button" href="https://tally.so/r/n9jeD0" target="_blank">Section 16 – Dedicated Hunter Firearm</a>
+    <a class="form-button" href="https://tally.so/r/mOPnM8" target="_blank">Section 16 – Dedicated Sports Shooter Firearm</a>
+    <a class="form-button" href="https://tally.so/r/wkp9Qo" target="_blank">Section 20 – Firearm License Application (Business Use)</a>
+    <a class="form-button" href="https://tally.so/r/wA5D9W" target="_blank">Competency Application Form</a>
+    <a class="form-button" href="https://tally.so/r/wayeoZ" target="_blank">Firearm Renewal Application</a>
   </div>
 
-  <a href="https://wa.me/2785184118" target="_blank" rel="noopener" id="whatsapp-button" aria-label="Chat on WhatsApp">
-    📲 Chat with us on WhatsApp
-  </a>
+  <a class="whatsapp-button" href="https://wa.me/27785184118" target="_blank">💬</a>
 
   <footer>
-    &copy; 2025 Johan de Beer – Firearm License Assistance | Powered by the Digital License Assist Method™
+    © 2025 Johan de Beer – Firearm License Assistance | Powered by the Digital License Assist Method™
   </footer>
+
 </body>
 </html>
