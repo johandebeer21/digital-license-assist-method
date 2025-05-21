@@ -5,46 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Digital License Assist Method™</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
   body {
-    font-family: 'Inter', Arial, sans-serif;
-    background: linear-gradient(135deg, #cce7ff, #e6f0ff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e6f0ff; /* light blue */
     margin: 0;
     padding: 2rem;
     text-align: center;
     color: #222;
   }
-  header {
-    margin-bottom: 2rem;
-  }
-  img.logo {
-    width: 180px;
-    max-width: 90vw;
+  header img {
+    max-width: 200px;
     margin-bottom: 1rem;
   }
   h1 {
-    margin: 0.2rem 0 0.6rem;
+    margin-bottom: 0.5rem;
     color: #1a202c;
-    font-weight: 700;
-    font-size: 1.9rem;
   }
-  header h2 {
-    color:#33475b;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #2c5282;
     font-weight: 600;
-    margin-bottom: 0.3rem;
   }
-  p.subtitle {
-    margin: 0 0 2rem 0;
-    font-size: 1.2rem;
-    color: #33475b;
+  p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
   }
   .button-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 420px;
-    margin: 0 auto;
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
   }
   a.button {
     background-color: #2b6cb0;
@@ -59,52 +52,56 @@
   a.button:hover {
     background-color: #2c5282;
   }
-  /* WhatsApp Button Styles */
-  .whatsapp-button {
+  .whatsapp-btn {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 20px;
+    right: 20px;
     background-color: #25D366;
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     display: flex;
-    align-items: center;
     justify-content: center;
-    animation: pulse 3s infinite;
+    align-items: center;
+    animation: pulse 2.5s infinite;
+    cursor: pointer;
     z-index: 1000;
   }
-  .whatsapp-button img {
+  .whatsapp-btn img {
     width: 30px;
     height: 30px;
   }
   @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    50% { box-shadow: 0 0 10px 8px rgba(37, 211, 102, 0.4); }
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
   }
   footer {
     margin-top: 3rem;
     font-size: 0.9rem;
-    color: #666;
+    color: #888;
   }
+  /* Responsive */
   @media (max-width: 480px) {
-    body {
-      padding: 1rem;
-    }
-    a.button {
-      font-size: 1rem;
-      padding: 0.9rem;
+    .button-container {
+      max-width: 100%;
+      padding: 0 1rem;
     }
   }
 </style>
 </head>
 <body>
   <header>
-    <img src="https://github.com/johandebeer21/firearm-application-landing/blob/main/JDB%20LA%20TRANSPARENT.png?raw=true" alt="Johan de Beer Logo" class="logo" />
-    <h2>Powered by the Digital License Assist Method™</h2>
-    <p class="subtitle">Please select the application you want to apply for:</p>
+    <img src="https://github.com/johandebeer21/firearm-application-landing/blob/main/JDB%20LA%20TRANSPARENT.png?raw=true" alt="Logo" />
   </header>
+
+  <h1>Firearm License Application Portal</h1>
+
+  <h2>Proudly powered by our exclusive Digital License Assist Method™, fast-tracking your firearm license application with accuracy, support, and professionalism.</h2>
+
+  <p>Please select the application you want to apply for:</p>
+
   <div class="button-container">
     <a href="https://tally.so/r/wogW1b" target="_blank" rel="noopener" class="button">Section 13 – Firearm License for Self-Defense</a>
     <a href="https://tally.so/r/w82OJA" target="_blank" rel="noopener" class="button">Section 15 – Firearm License (Occasional Hunting & Shooting)</a>
@@ -115,9 +112,8 @@
     <a href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener" class="button">Section 20 – Firearm License Application (Business Use)</a>
   </div>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/2785184118" target="_blank" rel="noopener" class="whatsapp-button" aria-label="WhatsApp chat">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" />
+  <a href="https://wa.me/2785184118" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="WhatsApp Chat">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
   </a>
 
   <footer>
