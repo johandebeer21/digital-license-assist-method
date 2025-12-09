@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -13,29 +13,36 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #e6f0ff; /* light blue */
     margin: 0;
-    padding: 2rem;
+    padding: 1rem 2rem; /* reduced top padding for better spacing */
     text-align: center;
     color: #222;
   }
+
   header img {
-    max-width: 200px;
-    margin-bottom: 1rem;
+    width: 80%;       /* responsive width */
+    max-width: 350px; /* slightly bigger on desktop */
+    height: auto;     /* maintain aspect ratio */
+    margin-bottom: 1.5rem; /* spacing between logo and title */
   }
+
   h1 {
     margin-bottom: 0.5rem;
     color: #1a202c;
   }
+
   h2 {
     margin-top: 0;
     margin-bottom: 1.5rem;
     color: #2c5282;
     font-weight: 600;
   }
+
   p {
     margin-bottom: 2rem;
     font-size: 1.1rem;
     color: #555;
   }
+
   .button-container {
     display: flex;
     flex-direction: column;
@@ -43,6 +50,7 @@
     max-width: 400px;
     margin: 0 auto 2rem auto;
   }
+
   a.button {
     background-color: #2b6cb0;
     color: white;
@@ -53,9 +61,11 @@
     box-shadow: 0 4px 6px rgba(43, 108, 176, 0.4);
     transition: background-color 0.3s ease;
   }
+
   a.button:hover {
     background-color: #2c5282;
   }
+
   .whatsapp-btn {
     position: fixed;
     bottom: 20px;
@@ -72,21 +82,25 @@
     cursor: pointer;
     z-index: 1000;
   }
+
   .whatsapp-btn img {
     width: 30px;
     height: 30px;
   }
+
   @keyframes pulse {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
     70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
   }
+
   footer {
     margin-top: 3rem;
     font-size: 0.9rem;
     color: #888;
   }
-  /* Responsive */
+
+  /* Responsive adjustments */
   @media (max-width: 480px) {
     .button-container {
       max-width: 100%;
@@ -129,4 +143,4 @@
     &copy; 2025 Johan de Beer – Firearm License Assistance | Powered by the Digital License Assist Method™
   </footer>
 </body>
-</html>
+  </html>
