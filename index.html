@@ -19,16 +19,21 @@
     color: #222;
   }
 
-  /* Compact Hero Section with Logo */
+  /* ⭐ HERO SECTION */
   .logo-hero {
     position: relative;
-    padding: 0.5rem 1rem; /* compact vertical padding */
-    text-align: center;
+    width: 100%;
+    min-height: 150px;      /* desktop height */
+    max-height: 220px;      /* prevent it from being too tall */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 0 0 25px 25px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background: linear-gradient(-45deg, #2b6cb0, #2c5282, #4c91ff, #1a365d);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
   }
 
   @keyframes gradientShift {
@@ -38,26 +43,24 @@
   }
 
   .logo-hero img {
-    width: 55%;         /* slightly smaller logo */
-    max-width: 350px;
+    width: 50%;        /* adjust logo size to fit hero */
+    max-width: 250px;  /* ensures it doesn't get too big */
     height: auto;
-    display: block;
-    margin: 0 auto;
   }
 
   /* Headings below hero */
   h1 {
-    margin: 1rem 0 0.5rem 0;
-    font-size: 2rem;    /* reduced size */
+    margin: 1.5rem 0 0.5rem 0;
     color: #1a202c;
+    font-size: 2rem;  /* smaller than before */
   }
 
   h2 {
     margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;  /* reduced size */
+    margin-bottom: 1.2rem;
     color: #2c5282;
     font-weight: 600;
+    font-size: 1.2rem; /* reduced for balance */
   }
 
   p {
@@ -123,17 +126,18 @@
     color: #888;
   }
 
-  /* Responsive adjustments */
+  /* MOBILE RESPONSIVE */
   @media (max-width: 480px) {
     .logo-hero {
-      padding: 0.3rem 1rem;
+      min-height: 100px;
+      max-height: 140px;
     }
     .logo-hero img {
-      width: 70%;
-      max-width: 250px;
+      width: 60%;
+      max-width: 180px;
     }
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
     h2 {
       font-size: 1rem;
