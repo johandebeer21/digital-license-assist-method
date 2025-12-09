@@ -20,10 +20,8 @@
   /* ⭐ Animated Geometric Background */
   .background-shapes {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     z-index: -1;
     overflow: hidden;
   }
@@ -31,22 +29,22 @@
   .shape {
     position: absolute;
     opacity: 0.3;
+    background-color: rgba(43,108,176,0.4);
     animation: moveShape linear infinite;
   }
 
-  /* Shape types */
-  .diamond { clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
-  .triangle { clip-path: polygon(50% 0%, 100% 100%, 0% 100%); }
-  .hexagon { clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }
-  .circle { border-radius: 50%; }
-  .square { } /* default square */
+  .diamond { width: 40px; height: 40px; clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
+  .triangle { width: 40px; height: 40px; clip-path: polygon(50% 0%, 100% 100%, 0% 100%); }
+  .hexagon { width: 50px; height: 50px; clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }
+  .circle { width: 40px; height: 40px; border-radius: 50%; }
+  .square { width: 40px; height: 40px; }
 
   @keyframes moveShape {
-    0% { transform: translate(var(--x-start), var(--y-start)) rotate(0deg) scale(var(--scale)); opacity: 0; }
+    0% { transform: translate(var(--x-start), var(--y-start)) rotate(0deg); opacity: 0; }
     10% { opacity: 0.3; }
-    50% { transform: translate(var(--x-mid), var(--y-mid)) rotate(180deg) scale(calc(var(--scale) * 1.1)); opacity: 0.25; }
+    50% { transform: translate(var(--x-mid), var(--y-mid)) rotate(180deg); opacity: 0.25; }
     90% { opacity: 0.2; }
-    100% { transform: translate(var(--x-end), var(--y-end)) rotate(360deg) scale(var(--scale)); opacity: 0; }
+    100% { transform: translate(var(--x-end), var(--y-end)) rotate(360deg); opacity: 0; }
   }
 
   /* ⭐ HERO SECTION */
@@ -113,38 +111,16 @@
 <body>
 
 <!-- Animated Background -->
-<div class="background-shapes">
-  <!-- Diamonds -->
-  <div class="shape diamond" style="--x-start:-10vw; --y-start:10vh; --x-mid:50vw; --y-mid:50vh; --x-end:110vw; --y-end:90vh; --scale:0.6; animation-duration:18s;"></div>
-  <div class="shape diamond" style="--x-start:110vw; --y-start:20vh; --x-mid:40vw; --y-mid:60vh; --x-end:-10vw; --y-end:80vh; --scale:0.8; animation-duration:22s;"></div>
-  
-  <!-- Triangles -->
-  <div class="shape triangle" style="--x-start:50vw; --y-start:-10vh; --x-mid:70vw; --y-mid:50vh; --x-end:30vw; --y-end:110vh; --scale:0.5; animation-duration:20s;"></div>
-  <div class="shape triangle" style="--x-start:-20vw; --y-start:70vh; --x-mid:60vw; --y-mid:30vh; --x-end:120vw; --y-end:-10vh; --scale:0.7; animation-duration:24s;"></div>
-  
-  <!-- Hexagons -->
-  <div class="shape hexagon" style="--x-start:120vw; --y-start:80vh; --x-mid:30vw; --y-mid:40vh; --x-end:-20vw; --y-end:-10vh; --scale:0.6; animation-duration:26s;"></div>
-  <div class="shape hexagon" style="--x-start:-30vw; --y-start:90vh; --x-mid:80vw; --y-mid:20vh; --x-end:110vw; --y-end:-20vh; --scale:0.5; animation-duration:28s;"></div>
-  
-  <!-- Circles -->
-  <div class="shape circle" style="--x-start:100vw; --y-start:0vh; --x-mid:40vw; --y-mid:70vh; --x-end:-20vw; --y-end:120vh; --scale:0.4; animation-duration:21s;"></div>
-  <div class="shape circle" style="--x-start:-20vw; --y-start:50vh; --x-mid:60vw; --y-mid:30vh; --x-end:120vw; --y-end:0vh; --scale:0.5; animation-duration:23s;"></div>
-  
-  <!-- Squares -->
-  <div class="shape square" style="--x-start:0vw; --y-start:-10vh; --x-mid:70vw; --y-mid:50vh; --x-end:50vw; --y-end:110vh; --scale:0.6; animation-duration:19s;"></div>
-  <div class="shape square" style="--x-start:100vw; --y-start:10vh; --x-mid:30vw; --y-mid:60vh; --x-end:-10vw; --y-end:90vh; --scale:0.7; animation-duration:25s;"></div>
-</div>
+<div class="background-shapes" id="bgShapes"></div>
 
 <header class="logo-hero">
   <img src="https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/refs/heads/main/1765147256043.png" alt="Logo" />
 </header>
 
 <h1>Firearm License Application Portal</h1>
-
 <h2>
   Proudly powered by our exclusive Digital License Assist Method™, fast-tracking your firearm license application with accuracy, support, and professionalism.
 </h2>
-
 <p>Please select the application you want to apply for:</p>
 
 <div class="button-container">
@@ -166,6 +142,37 @@
 <footer>
   &copy; 2025 Johan de Beer – Firearm License Assistance | Powered by the Digital License Assist Method™
 </footer>
+
+<script>
+  const shapes = ['diamond','triangle','hexagon','circle','square'];
+  const bgContainer = document.getElementById('bgShapes');
+
+  // Generate multiple moving shapes
+  for(let i=0;i<25;i++){
+    const shapeType = shapes[Math.floor(Math.random()*shapes.length)];
+    const div = document.createElement('div');
+    div.className = 'shape '+shapeType;
+
+    // random start, mid, end positions
+    const xStart = Math.random()*120-10+'vw';
+    const yStart = Math.random()*120-10+'vh';
+    const xMid = Math.random()*100+'vw';
+    const yMid = Math.random()*100+'vh';
+    const xEnd = Math.random()*120-10+'vw';
+    const yEnd = Math.random()*120-10+'vh';
+    const duration = 15 + Math.random()*20;
+
+    div.style.setProperty('--x-start', xStart);
+    div.style.setProperty('--y-start', yStart);
+    div.style.setProperty('--x-mid', xMid);
+    div.style.setProperty('--y-mid', yMid);
+    div.style.setProperty('--x-end', xEnd);
+    div.style.setProperty('--y-end', yEnd);
+    div.style.animationDuration = duration+'s';
+
+    bgContainer.appendChild(div);
+  }
+</script>
 
 </body>
 </html>
