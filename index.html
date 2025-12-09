@@ -19,18 +19,16 @@
     color: #222;
   }
 
-  /* ⭐ ULTRA-COMPACT HERO WITH LOGO SHIFTED UPWARD */
+  /* ⭐ HERO SECTION */
   .logo-hero {
     position: relative;
-    padding: 0.1rem 1rem 0.1rem 1rem; /* EVEN SHORTER NOW */
+    padding: 1rem 1rem 2rem 1rem; /* slightly taller for spacing */
     text-align: center;
     border-radius: 0 0 25px 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background: linear-gradient(-45deg, #2b6cb0, #2c5282, #4c91ff, #1a365d);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
-    height: 120px; /* 🔥 HARD CAP HEIGHT (reduced from ~250px) */
-    overflow: visible;
   }
 
   @keyframes gradientShift {
@@ -40,23 +38,26 @@
   }
 
   .logo-hero img {
-    width: 65%;
-    max-width: 480px;
+    width: 55%;          /* slightly smaller logo */
+    max-width: 420px;    
     height: auto;
     display: block;
-    margin: -70px auto 0 auto; /* 🔥 pulls logo upward by 70px */
+    margin: 0 auto 1rem auto;
   }
 
   h1 {
-    margin: 0.6rem 0 0.3rem 0;
+    margin: 1.5rem 0 0.5rem 0;
     color: #1a202c;
   }
 
   h2 {
     margin-top: 0;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     color: #2c5282;
     font-weight: 600;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   p {
@@ -122,32 +123,29 @@
     color: #888;
   }
 
-  /* 📱 MOBILE — even more compact */
+  /* Responsive */
   @media (max-width: 480px) {
     .logo-hero {
-      height: 100px; /* smaller hero */
-      padding: 0;
+      padding: 0.5rem 1rem 1.5rem 1rem;
     }
     .logo-hero img {
-      width: 75%;
+      width: 65%;
       max-width: 300px;
-      margin-top: -55px; /* adjust upward pull for small screens */
+      margin-bottom: 0.8rem;
     }
   }
-
 </style>
 </head>
 <body>
 
+<!-- HERO SECTION -->
 <header class="logo-hero">
   <img src="https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/refs/heads/main/1765147256043.png" alt="Logo" />
 </header>
 
 <h1>Firearm License Application Portal</h1>
 
-<h2>
-  Proudly powered by our exclusive Digital License Assist Method™, fast-tracking your firearm license application with accuracy, support, and professionalism.
-</h2>
+<h2>Proudly powered by our exclusive Digital License Assist Method™, fast-tracking your firearm license application with accuracy, support, and professionalism.</h2>
 
 <p>Please select the application you want to apply for:</p>
 
