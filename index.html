@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -13,20 +13,30 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #e6f0ff; /* light blue */
     margin: 0;
-    padding: 1rem 2rem; /* reduced top padding for better spacing */
+    padding: 0; /* no top padding needed, hero section handles spacing */
     text-align: center;
     color: #222;
   }
 
-  header img {
-    width: 80%;       /* responsive width */
-    max-width: 350px; /* slightly bigger on desktop */
-    height: auto;     /* maintain aspect ratio */
-    margin-bottom: 1.5rem; /* spacing between logo and title */
+  /* Logo Hero Section */
+  .logo-hero {
+    background: linear-gradient(90deg, #2b6cb0, #2c5282); /* professional gradient */
+    padding: 4rem 1rem;  /* ample space around logo */
+    text-align: center;
+    border-radius: 0 0 25px 25px; /* curved bottom edges */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle depth */
+  }
+
+  .logo-hero img {
+    width: 150px;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   h1 {
-    margin-bottom: 0.5rem;
+    margin: 2rem 0 0.5rem 0;
     color: #1a202c;
   }
 
@@ -106,11 +116,19 @@
       max-width: 100%;
       padding: 0 1rem;
     }
+    .logo-hero {
+      padding: 3rem 1rem;
+    }
+    .logo-hero img {
+      width: 120px;
+      max-width: 180px;
+    }
   }
 </style>
 </head>
 <body>
-  <header>
+  <!-- Logo Hero Section -->
+  <header class="logo-hero">
     <img src="https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/refs/heads/main/1765147256043.png" alt="Logo" />
   </header>
 
@@ -143,4 +161,4 @@
     &copy; 2025 Johan de Beer – Firearm License Assistance | Powered by the Digital License Assist Method™
   </footer>
 </body>
-  </html>
+</html>
