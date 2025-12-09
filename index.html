@@ -10,53 +10,24 @@
 <title>Digital License Assist Method™</title>
 
 <style>
-  /* MAIN PAGE BODY & ANIMATED BACKGROUND */
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
     color: #222;
-    background: #e6f0ff;
+    /* base color */
+    background-color: #e6f0ff;
     position: relative;
     overflow-x: hidden;
-  }
-
-  /* Subtle moving geometric shapes */
-  body::before, body::after {
-    content: '';
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: repeating-linear-gradient(
-      45deg,
-      rgba(255,255,255,0.03) 0px,
-      rgba(255,255,255,0.03) 1px,
-      transparent 1px,
-      transparent 20px
-    );
-    z-index: -1;
-    animation: moveBackground 30s linear infinite;
-  }
-
-  body::after {
-    transform: rotate(90deg);
-    opacity: 0.5;
-  }
-
-  @keyframes moveBackground {
-    0% { transform: translate(0,0) rotate(0deg); }
-    100% { transform: translate(50px,50px) rotate(360deg); }
   }
 
   /* ⭐ HERO SECTION */
   .logo-hero {
     position: relative;
     width: 100%;
-    min-height: 150px;      /* desktop height */
-    max-height: 220px;      /* prevent it from being too tall */
+    min-height: 150px;      
+    max-height: 220px;      
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,16 +46,16 @@
   }
 
   .logo-hero img {
-    width: 50%;        /* adjust logo size to fit hero */
-    max-width: 250px;  /* ensures it doesn't get too big */
+    width: 50%;        
+    max-width: 250px;  
     height: auto;
   }
 
-  /* Headings below hero */
+  /* HEADINGS */
   h1 {
     margin: 1.5rem 0 0.5rem 0;
     color: #1a202c;
-    font-size: 2rem;  /* smaller than before */
+    font-size: 2rem;
   }
 
   h2 {
@@ -92,7 +63,7 @@
     margin-bottom: 1.2rem;
     color: #2c5282;
     font-weight: 600;
-    font-size: 1.2rem; /* reduced for balance */
+    font-size: 1.2rem;
   }
 
   p {
@@ -101,6 +72,7 @@
     color: #555;
   }
 
+  /* BUTTONS */
   .button-container {
     display: flex;
     flex-direction: column;
@@ -124,6 +96,7 @@
     background-color: #2c5282;
   }
 
+  /* WHATSAPP BUTTON */
   .whatsapp-btn {
     position: fixed;
     bottom: 20px;
@@ -158,7 +131,7 @@
     color: #888;
   }
 
-  /* MOBILE RESPONSIVE */
+  /* MOBILE */
   @media (max-width: 480px) {
     .logo-hero {
       min-height: 100px;
@@ -175,20 +148,52 @@
       font-size: 1rem;
     }
   }
+
+  /* ⭐ MAIN BACKGROUND ANIMATION */
+  .animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* behind everything */
+    overflow: hidden;
+    background-color: #e6f0ff; /* same base color */
+  }
+
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(43, 108, 176, 0.1);
+    animation: float 20s infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.2; }
+    50% { transform: translateY(-300px) translateX(200px) rotate(180deg); opacity: 0.1; }
+    100% { transform: translateY(0) translateX(0) rotate(360deg); opacity: 0.2; }
+  }
+
 </style>
 </head>
 <body>
+
+<!-- animated background -->
+<div class="animated-background">
+  <div class="shape" style="width:100px; height:100px; top:20%; left:10%; animation-duration:25s;"></div>
+  <div class="shape" style="width:60px; height:60px; top:40%; left:70%; animation-duration:30s;"></div>
+  <div class="shape" style="width:80px; height:80px; top:60%; left:30%; animation-duration:35s;"></div>
+  <div class="shape" style="width:120px; height:120px; top:80%; left:50%; animation-duration:40s;"></div>
+</div>
 
 <header class="logo-hero">
   <img src="https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/refs/heads/main/1765147256043.png" alt="Logo" />
 </header>
 
 <h1>Firearm License Application Portal</h1>
-
 <h2>
   Proudly powered by our exclusive Digital License Assist Method™, fast-tracking your firearm license application with accuracy, support, and professionalism.
 </h2>
-
 <p>Please select the application you want to apply for:</p>
 
 <div class="button-container">
