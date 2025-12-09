@@ -19,16 +19,18 @@
     color: #222;
   }
 
-  /* ⭐ ULTRA-SHORT HERO SECTION */
+  /* ⭐ ULTRA-COMPACT HERO WITH LOGO SHIFTED UPWARD */
   .logo-hero {
     position: relative;
-    padding: 0.2rem 1rem 0.6rem 1rem; /* SUPER short but clean */
+    padding: 0.1rem 1rem 0.1rem 1rem; /* EVEN SHORTER NOW */
     text-align: center;
     border-radius: 0 0 25px 25px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background: linear-gradient(-45deg, #2b6cb0, #2c5282, #4c91ff, #1a365d);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
+    height: 120px; /* 🔥 HARD CAP HEIGHT (reduced from ~250px) */
+    overflow: visible;
   }
 
   @keyframes gradientShift {
@@ -38,16 +40,15 @@
   }
 
   .logo-hero img {
-    width: 65%;            /* large */
-    max-width: 480px;      /* slightly smaller max for balance */
+    width: 65%;
+    max-width: 480px;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: -70px auto 0 auto; /* 🔥 pulls logo upward by 70px */
   }
 
-  /* Headings below hero */
   h1 {
-    margin: 1rem 0 0.3rem 0;
+    margin: 0.6rem 0 0.3rem 0;
     color: #1a202c;
   }
 
@@ -121,14 +122,16 @@
     color: #888;
   }
 
-  /* MOBILE — even shorter */
+  /* 📱 MOBILE — even more compact */
   @media (max-width: 480px) {
     .logo-hero {
-      padding: 0.1rem 1rem 0.4rem 1rem; /* tiny */
+      height: 100px; /* smaller hero */
+      padding: 0;
     }
     .logo-hero img {
-      width: 70%;
+      width: 75%;
       max-width: 300px;
+      margin-top: -55px; /* adjust upward pull for small screens */
     }
   }
 
