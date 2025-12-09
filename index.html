@@ -22,14 +22,17 @@
   /* ⭐ HERO SECTION */
   .logo-hero {
     position: relative;
-    padding: 0.5rem 1rem 1rem 1rem; /* slightly shorter than before */
-    text-align: center;
+    width: 100%;
+    min-height: 150px;      /* desktop height */
+    max-height: 220px;      /* prevent it from being too tall */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 0 0 25px 25px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background: linear-gradient(-45deg, #2b6cb0, #2c5282, #4c91ff, #1a365d);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
-    max-height: 180px; /* desktop max height */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
   }
 
@@ -40,18 +43,16 @@
   }
 
   .logo-hero img {
-    width: 60%;            /* keeps logo large but fits */
-    max-width: 400px;
+    width: 50%;        /* adjust logo size to fit hero */
+    max-width: 250px;  /* ensures it doesn't get too big */
     height: auto;
-    display: block;
-    margin: 0 auto;
   }
 
   /* Headings below hero */
   h1 {
-    margin: 1rem 0 0.3rem 0;
+    margin: 1.5rem 0 0.5rem 0;
     color: #1a202c;
-    font-size: 1.9rem; /* slightly smaller for balance */
+    font-size: 2rem;  /* smaller than before */
   }
 
   h2 {
@@ -59,12 +60,12 @@
     margin-bottom: 1.2rem;
     color: #2c5282;
     font-weight: 600;
-    font-size: 1.1rem; /* smaller and readable */
+    font-size: 1.2rem; /* reduced for balance */
   }
 
   p {
     margin-bottom: 2rem;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: #555;
   }
 
@@ -125,15 +126,15 @@
     color: #888;
   }
 
-  /* MOBILE ADJUSTMENTS */
+  /* MOBILE RESPONSIVE */
   @media (max-width: 480px) {
     .logo-hero {
-      padding: 0.1rem 1rem 0.4rem 1rem; /* tiny for mobile */
-      max-height: none;
+      min-height: 100px;
+      max-height: 140px;
     }
     .logo-hero img {
-      width: 70%;
-      max-width: 300px;
+      width: 60%;
+      max-width: 180px;
     }
     h1 {
       font-size: 1.5rem;
