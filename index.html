@@ -10,21 +10,53 @@
 <title>Digital License Assist Method™</title>
 
 <style>
+  /* MAIN PAGE BODY & ANIMATED BACKGROUND */
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #e6f0ff;
     margin: 0;
     padding: 0;
     text-align: center;
     color: #222;
+    background: #e6f0ff;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Subtle moving geometric shapes */
+  body::before, body::after {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.03) 0px,
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+    z-index: -1;
+    animation: moveBackground 30s linear infinite;
+  }
+
+  body::after {
+    transform: rotate(90deg);
+    opacity: 0.5;
+  }
+
+  @keyframes moveBackground {
+    0% { transform: translate(0,0) rotate(0deg); }
+    100% { transform: translate(50px,50px) rotate(360deg); }
   }
 
   /* ⭐ HERO SECTION */
   .logo-hero {
     position: relative;
     width: 100%;
-    min-height: 150px;
-    max-height: 220px;
+    min-height: 150px;      /* desktop height */
+    max-height: 220px;      /* prevent it from being too tall */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,47 +75,16 @@
   }
 
   .logo-hero img {
-    width: 50%;
-    max-width: 250px;
+    width: 50%;        /* adjust logo size to fit hero */
+    max-width: 250px;  /* ensures it doesn't get too big */
     height: auto;
   }
 
-  /* MAIN CONTENT WITH GEOMETRIC BACKGROUND */
-  .main-content {
-    position: relative;
-    z-index: 1;
-    padding: 2rem 1rem 3rem 1rem;
-  }
-
-  /* Geometric animation overlay */
-  .main-content::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: repeating-linear-gradient(
-      45deg,
-      rgba(43,108,176,0.05) 0px,
-      rgba(43,108,176,0.05) 2px,
-      transparent 2px,
-      transparent 10px
-    );
-    animation: moveLines 20s linear infinite;
-    pointer-events: none;
-    z-index: -1;
-  }
-
-  @keyframes moveLines {
-    0% { transform: translate(0,0); }
-    100% { transform: translate(50px,50px); }
-  }
-
-  /* Headings */
+  /* Headings below hero */
   h1 {
     margin: 1.5rem 0 0.5rem 0;
     color: #1a202c;
-    font-size: 2rem;
+    font-size: 2rem;  /* smaller than before */
   }
 
   h2 {
@@ -91,7 +92,7 @@
     margin-bottom: 1.2rem;
     color: #2c5282;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* reduced for balance */
   }
 
   p {
@@ -173,11 +174,7 @@
     h2 {
       font-size: 1rem;
     }
-    .main-content {
-      padding: 1.5rem 1rem 2rem 1rem;
-    }
   }
-
 </style>
 </head>
 <body>
@@ -186,25 +183,23 @@
   <img src="https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/refs/heads/main/1765147256043.png" alt="Logo" />
 </header>
 
-<div class="main-content">
-  <h1>Firearm License Application Portal</h1>
+<h1>Firearm License Application Portal</h1>
 
-  <h2>
-    Proudly powered by our exclusive Digital License Assist Method™, fast-tracking your firearm license application with accuracy, support, and professionalism.
-  </h2>
+<h2>
+  Proudly powered by our exclusive Digital License Assist Method™, fast-tracking your firearm license application with accuracy, support, and professionalism.
+</h2>
 
-  <p>Please select the application you want to apply for:</p>
+<p>Please select the application you want to apply for:</p>
 
-  <div class="button-container">
-    <a href="https://tally.so/r/wogW1b" target="_blank" rel="noopener" class="button">Section 13 – Firearm License for Self-Defense</a>
-    <a href="https://tally.so/r/w82OJA" target="_blank" rel="noopener" class="button">Section 15 – Firearm License (Occasional Hunting & Shooting)</a>
-    <a href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Hunter Firearm</a>
-    <a href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Sports Shooter Firearm</a>
-    <a href="https://tally.so/r/wA5D9W" target="_blank" rel="noopener" class="button">Competency Application Form</a>
-    <a href="https://tally.so/r/wayeoZ" target="_blank" rel="noopener" class="button">Firearm Renewal Application</a>
-    <a href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener" class="button">Section 20 – Firearm License Application (Business Use)</a>
-    <a href="https://tally.so/r/3l5eWk" target="_blank" rel="noopener" class="button">Testimony Application Form</a>
-  </div>
+<div class="button-container">
+  <a href="https://tally.so/r/wogW1b" target="_blank" rel="noopener" class="button">Section 13 – Firearm License for Self-Defense</a>
+  <a href="https://tally.so/r/w82OJA" target="_blank" rel="noopener" class="button">Section 15 – Firearm License (Occasional Hunting & Shooting)</a>
+  <a href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Hunter Firearm</a>
+  <a href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener" class="button">Section 16 – Dedicated Sports Shooter Firearm</a>
+  <a href="https://tally.so/r/wA5D9W" target="_blank" rel="noopener" class="button">Competency Application Form</a>
+  <a href="https://tally.so/r/wayeoZ" target="_blank" rel="noopener" class="button">Firearm Renewal Application</a>
+  <a href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener" class="button">Section 20 – Firearm License Application (Business Use)</a>
+  <a href="https://tally.so/r/3l5eWk" target="_blank" rel="noopener" class="button">Testimony Application Form</a>
 </div>
 
 <a href="https://wa.me/27785184118?text=Hi%20Johan%2C%20I'm%20interested%20in%20firearm%20license%20assistance"
