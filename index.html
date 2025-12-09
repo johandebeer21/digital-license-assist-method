@@ -13,23 +13,32 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #e6f0ff; /* light blue */
     margin: 0;
-    padding: 0; /* no top padding needed, hero section handles spacing */
+    padding: 0;
     text-align: center;
     color: #222;
   }
 
   /* Logo Hero Section */
   .logo-hero {
-    background: linear-gradient(90deg, #2b6cb0, #2c5282); /* professional gradient */
-    padding: 4rem 1rem;  /* ample space around logo */
+    position: relative;
+    padding: 2.5rem 1rem;  /* reduced vertical padding */
     text-align: center;
-    border-radius: 0 0 25px 25px; /* curved bottom edges */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle depth */
+    border-radius: 0 0 25px 25px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    background: linear-gradient(-45deg, #2b6cb0, #2c5282, #4c91ff, #1a365d);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   .logo-hero img {
-    width: 60%;        /* bigger relative to container */
-    max-width: 500px;  /* allow it to be large on desktop */
+    width: 60%;        /* large but responsive */
+    max-width: 500px;  
     height: auto;
     display: block;
     margin: 0 auto;
@@ -117,10 +126,10 @@
       padding: 0 1rem;
     }
     .logo-hero {
-      padding: 3rem 1rem;
+      padding: 2rem 1rem; /* smaller vertical padding on mobile */
     }
     .logo-hero img {
-      width: 70%;      /* larger relative to mobile screen */
+      width: 70%;      
       max-width: 300px;
     }
   }
