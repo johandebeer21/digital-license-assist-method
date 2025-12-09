@@ -19,6 +19,43 @@
     position: relative;
   }
 
+  /* ⭐ Animated Geometric Background */
+  .background-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .shape {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(43,108,176,0.3);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* diamond shape */
+    opacity: 0.4;
+    animation: moveShape linear infinite;
+  }
+
+  @keyframes moveShape {
+    0% {
+      transform: translate(var(--x-start), var(--y-start)) rotate(0deg) scale(var(--scale));
+      opacity: 0;
+    }
+    10% { opacity: 0.4; }
+    50% {
+      transform: translate(var(--x-mid), var(--y-mid)) rotate(180deg) scale(var(--scale));
+      opacity: 0.3;
+    }
+    100% {
+      transform: translate(var(--x-end), var(--y-end)) rotate(360deg) scale(var(--scale));
+      opacity: 0;
+    }
+  }
+
   /* ⭐ HERO SECTION */
   .logo-hero {
     position: relative;
@@ -34,7 +71,6 @@
     animation: gradientShift 15s ease infinite;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
-    z-index: 2;
   }
 
   @keyframes gradientShift {
@@ -49,13 +85,11 @@
     height: auto;
   }
 
-  /* HEADINGS */
+  /* Headings below hero */
   h1 {
     margin: 1.5rem 0 0.5rem 0;
     color: #1a202c;
     font-size: 2rem;
-    position: relative;
-    z-index: 3;
   }
 
   h2 {
@@ -64,16 +98,12 @@
     color: #2c5282;
     font-weight: 600;
     font-size: 1.2rem;
-    position: relative;
-    z-index: 3;
   }
 
   p {
     margin-bottom: 2rem;
     font-size: 1.1rem;
     color: #555;
-    position: relative;
-    z-index: 3;
   }
 
   .button-container {
@@ -82,8 +112,6 @@
     gap: 1rem;
     max-width: 400px;
     margin: 0 auto 2rem auto;
-    position: relative;
-    z-index: 3;
   }
 
   a.button {
@@ -101,7 +129,6 @@
     background-color: #2c5282;
   }
 
-  /* WHATSAPP BUTTON */
   .whatsapp-btn {
     position: fixed;
     bottom: 20px;
@@ -116,7 +143,7 @@
     align-items: center;
     animation: pulse 2.5s infinite;
     cursor: pointer;
-    z-index: 5;
+    z-index: 1000;
   }
 
   .whatsapp-btn img {
@@ -134,44 +161,6 @@
     margin-top: 3rem;
     font-size: 0.9rem;
     color: #888;
-    position: relative;
-    z-index: 3;
-  }
-
-  /* MAIN BACKGROUND ANIMATION - geometric shapes */
-  .shape {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    opacity: 0.15;
-    z-index: 1;
-    border-radius: 0;
-    background: rgba(43,108,176,0.3);
-    animation: float 15s linear infinite;
-  }
-
-  .shape.circle { border-radius: 50%; }
-  .shape.triangle {
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 50px solid rgba(43,108,176,0.3);
-    background: none;
-  }
-  .shape.hexagon {
-    width: 50px;
-    height: 28.87px;
-    background: rgba(43,108,176,0.3);
-    position: fixed;
-    clip-path: polygon(
-      25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%
-    );
-  }
-
-  @keyframes float {
-    0% { transform: translateY(-100px) rotate(0deg); }
-    100% { transform: translateY(110vh) rotate(360deg); }
   }
 
   /* MOBILE RESPONSIVE */
@@ -184,27 +173,37 @@
       width: 60%;
       max-width: 180px;
     }
-    h1 { font-size: 1.5rem; }
-    h2 { font-size: 1rem; }
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
   }
-
 </style>
 </head>
+
 <body>
 
-<!-- geometric shapes floating in background -->
-<div class="shape circle" style="left:10%; animation-duration:18s;"></div>
-<div class="shape circle" style="left:70%; animation-duration:22s;"></div>
-<div class="shape triangle" style="left:30%; animation-duration:20s;"></div>
-<div class="shape triangle" style="left:80%; animation-duration:25s;"></div>
-<div class="shape hexagon" style="left:50%; animation-duration:28s;"></div>
+<!-- Animated Background -->
+<div class="background-shapes">
+  <!-- Generate multiple shapes with inline CSS variables for positions -->
+  <div class="shape" style="--x-start:-10vw; --y-start:10vh; --x-mid:50vw; --y-mid:50vh; --x-end:110vw; --y-end:90vh; --scale:0.6; animation-duration:20s;"></div>
+  <div class="shape" style="--x-start:110vw; --y-start:20vh; --x-mid:40vw; --y-mid:60vh; --x-end:-10vw; --y-end:80vh; --scale:0.8; animation-duration:25s;"></div>
+  <div class="shape" style="--x-start:50vw; --y-start:-10vh; --x-mid:70vw; --y-mid:50vh; --x-end:30vw; --y-end:110vh; --scale:0.5; animation-duration:18s;"></div>
+  <div class="shape" style="--x-start:-20vw; --y-start:70vh; --x-mid:60vw; --y-mid:30vh; --x-end:120vw; --y-end:-10vh; --scale:0.7; animation-duration:22s;"></div>
+  <div class="shape" style="--x-start:120vw; --y-start:80vh; --x-mid:30vw; --y-mid:40vh; --x-end:-20vw; --y-end:-10vh; --scale:0.6; animation-duration:24s;"></div>
+</div>
 
 <header class="logo-hero">
   <img src="https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/refs/heads/main/1765147256043.png" alt="Logo" />
 </header>
 
 <h1>Firearm License Application Portal</h1>
-<h2>Proudly powered by our exclusive Digital License Assist Method™, fast-tracking your firearm license application with accuracy, support, and professionalism.</h2>
+
+<h2>
+  Proudly powered by our exclusive Digital License Assist Method™, fast-tracking your firearm license application with accuracy, support, and professionalism.
+</h2>
 
 <p>Please select the application you want to apply for:</p>
 
