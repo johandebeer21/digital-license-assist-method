@@ -65,6 +65,9 @@
     color: #222;
     overflow-x: hidden;
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   .background-shapes {
@@ -128,6 +131,26 @@
   a.button { background-color: #2b6cb0; color: white; padding: 1rem; text-decoration: none; font-size: 1.1rem; border-radius: 6px; box-shadow: 0 4px 6px rgba(43,108,176,0.4); transition: background-color 0.3s ease; }
   a.button:hover { background-color: #2c5282; }
 
+  /* ⭐ Website Button with Pulse & Glow */
+  a.button-website {
+    background: linear-gradient(135deg, #ff8c42, #ff5e62);
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.15rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(255,94,98,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulseGlow 2.5s infinite;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px rgba(255,94,98,0.5); transform: scale(1); }
+    50% { box-shadow: 0 0 25px rgba(255,94,98,0.7); transform: scale(1.03); }
+    100% { box-shadow: 0 0 10px rgba(255,94,98,0.5); transform: scale(1); }
+  }
+
   .whatsapp-btn {
     position: fixed; bottom: 20px; right: 20px;
     background-color: #25D366;
@@ -148,10 +171,11 @@
   }
 
   footer {
-    margin-top: 4rem;
     font-size: 0.9rem;
     color: #888;
-    padding-bottom: 40px;
+    padding: 20px 0;
+    margin-top: auto;
+    background: transparent;
   }
 
   @media (max-width: 480px) {
@@ -185,6 +209,11 @@
   <a href="https://tally.so/r/wayeoZ" target="_blank" rel="noopener" class="button">Firearm Renewal Application</a>
   <a href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener" class="button">Section 20 – Firearm License Application (Business Use)</a>
   <a href="https://tally.so/r/3l5eWk" target="_blank" rel="noopener" class="button">Testimony Application Form</a>
+
+  <!-- ⭐ Visit Website Button -->
+  <a href="https://jdbfirearmlicense.lovable.app/" target="_blank" rel="noopener" class="button-website">
+    Visit Our Official Website
+  </a>
 </div>
 
 <a href="https://wa.me/27785184118?text=Hi%20Johan%2C%20I'm%20interested%20in%20firearm%20license%20assistance"
