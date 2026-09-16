@@ -147,10 +147,26 @@ body::after{
 
 .hero-panel{ background:rgba(255,255,255,.04); border:1px solid var(--border-2); border-radius:var(--r); padding:22px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); box-shadow:0 24px 64px rgba(0,0,0,.45); animation:fadeUp .9s ease both; animation-delay:.55s; }
 .panel-title{ font-family:'Oswald',sans-serif; font-size:.82rem; letter-spacing:.03em; text-transform:uppercase; color:var(--gold-light); margin-bottom:16px; }
-.steps-list{ display:flex; flex-direction:column; gap:10px; }
-.step{ display:flex; align-items:flex-start; gap:12px; padding:13px 14px; border-radius:13px; background:rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.06); }
+.steps-list{ display:flex; flex-direction:column; gap:10px; position:relative; }
+.steps-list::before{
+  content:"";
+  position:absolute; left:27px; top:26px; bottom:26px; width:2px;
+  background:linear-gradient(180deg, var(--gold-light), rgba(201,162,77,.1));
+  transform:scaleY(0); transform-origin:top;
+  animation:drawLine 1s ease forwards; animation-delay:1.1s;
+}
+@keyframes drawLine{ to{ transform:scaleY(1); } }
+.step{ display:flex; align-items:flex-start; gap:12px; padding:13px 14px; border-radius:13px; background:rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.06); position:relative; transition:border-color .2s, background .2s; }
+.step:hover{ background:rgba(0,0,0,.35); border-color:rgba(201,162,77,.2); }
 .step-num{ width:26px; height:26px; border-radius:8px; flex:0 0 auto; display:grid; place-items:center; background:rgba(201,162,77,.12); border:1px solid rgba(201,162,77,.22); color:var(--gold-light); font-size:.8rem; font-weight:700; }
 .step-text{ font-size:.87rem; color:#d7d3ca; line-height:1.48; padding-top:3px; }
+
+/* trust strip */
+.stat-strip{ max-width:var(--max); margin:0 auto; padding:44px 24px; border-bottom:1px solid var(--border); display:flex; flex-wrap:wrap; justify-content:center; gap:48px; }
+.stat{ text-align:center; min-width:150px; }
+.stat-num{ display:block; font-family:'Oswald',sans-serif; font-weight:600; font-size:2.1rem; color:var(--gold-light); line-height:1; }
+.stat-label{ display:block; margin-top:8px; font-size:.8rem; color:var(--muted); letter-spacing:.01em; }
+@media (max-width:640px){ .stat-strip{ gap:28px; padding:32px 20px; } .stat-num{ font-size:1.7rem; } }
 
 /* section */
 .section{ max-width:var(--max); margin:0 auto; padding:76px 24px; }
@@ -165,7 +181,7 @@ body::after{
 .portal-intro h4{ font-family:'Oswald',sans-serif; font-size:1.1rem; margin-bottom:6px; font-weight:500; }
 .portal-intro p{ color:var(--muted); font-size:.9rem; line-height:1.65; }
 
-.app-list{ display:flex; flex-direction:column; gap:10px; }
+.app-list{ display:flex; flex-direction:column; gap:10px; perspective:900px; }
 .app-btn{ display:flex; align-items:center; justify-content:space-between; gap:14px; padding:16px 18px; border-radius:14px; text-decoration:none; border:1px solid var(--border); background:rgba(255,255,255,.03); color:var(--text); transition:transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease; }
 .app-btn:visited{ color:var(--text); }
 .app-btn.live{ border-color:rgba(201,162,77,.28); background:linear-gradient(160deg, rgba(201,162,77,.09) 0%, rgba(201,162,77,.03) 100%); box-shadow:0 4px 24px rgba(201,162,77,.08), inset 0 1px 0 rgba(255,255,255,.06); }
@@ -208,7 +224,9 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
 .fab-wrap{ position:fixed; right:20px; bottom:20px; z-index:120; display:flex; align-items:center; gap:10px; }
 .fab-label{ padding:11px 18px; border-radius:999px; background:rgba(7,10,16,.9); border:1px solid var(--border-2); color:var(--text); font-size:.84rem; text-decoration:none; box-shadow:0 12px 32px rgba(0,0,0,.5); transition:transform .2s, background .2s; white-space:nowrap; }
 .fab-label:hover{ transform:translateY(-2px); background:rgba(20,20,20,.95); }
-.fab-btn{ width:56px; height:56px; border-radius:50%; display:grid; place-items:center; background:#25D366; box-shadow:0 14px 32px rgba(37,211,102,.28), 0 0 0 1px rgba(37,211,102,.3); text-decoration:none; border:none; transition:transform .25s ease, box-shadow .25s ease; animation:fabPop .6s cubic-bezier(.34,1.56,.64,1) both; animation-delay:1s; }
+.fab-btn{ width:56px; height:56px; border-radius:50%; display:grid; place-items:center; background:#25D366; box-shadow:0 14px 32px rgba(37,211,102,.28), 0 0 0 1px rgba(37,211,102,.3); text-decoration:none; border:none; transition:transform .25s ease, box-shadow .25s ease; animation:fabPop .6s cubic-bezier(.34,1.56,.64,1) both; animation-delay:1s; position:relative; }
+.fab-btn::after{ content:""; position:absolute; inset:-6px; border-radius:50%; border:2px solid rgba(37,211,102,.55); animation:sonarPing 2.8s ease-out infinite; animation-delay:2s; pointer-events:none; }
+@keyframes sonarPing{ 0%{ transform:scale(.85); opacity:.7; } 70%{ transform:scale(1.55); opacity:0; } 100%{ opacity:0; } }
 .fab-btn:hover{ transform:translateY(-3px) scale(1.05); box-shadow:0 20px 44px rgba(37,211,102,.4); }
 .fab-btn img{ width:28px; height:28px; }
 @keyframes fabPop{ from{opacity:0; transform:scale(.4);} to{opacity:1; transform:scale(1);} }
@@ -295,6 +313,22 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
   </div>
 </section>
 
+<!-- TRUST STRIP -->
+<section class="stat-strip">
+  <div class="stat">
+    <span class="stat-num" data-target="8">0</span>
+    <span class="stat-label">Licence Categories</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num" data-target="100" data-suffix="%">0</span>
+    <span class="stat-label">SAPS-Compliant Documentation</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num" data-target="1">0</span>
+    <span class="stat-label">Direct WhatsApp Line To Our Team</span>
+  </div>
+</section>
+
 <!-- APPLICATIONS -->
 <section class="section" id="applications">
   <div class="reveal">
@@ -311,40 +345,40 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
       </div>
 
       <div class="app-list">
-        <a class="app-btn live" href="https://tally.so/r/wogW1b" target="_blank" rel="noopener">
+        <a class="app-btn live reveal" href="https://tally.so/r/wogW1b" target="_blank" rel="noopener">
           <div class="btn-info"><strong>Section 13 — Self-Defence</strong><span>Firearm license for self-defense</span></div>
           <div class="btn-arrow">↗</div>
         </a>
-        <a class="app-btn live" href="https://tally.so/r/w82OJA" target="_blank" rel="noopener">
+        <a class="app-btn live reveal" href="https://tally.so/r/w82OJA" target="_blank" rel="noopener">
           <div class="btn-info"><strong>Section 15 — Occasional Hunting & Shooting</strong><span>Firearm license application</span></div>
           <div class="btn-arrow">↗</div>
         </a>
-        <a class="app-btn live" href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener">
+        <a class="app-btn live reveal" href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener">
           <div class="btn-info"><strong>Section 16 — Dedicated Hunter</strong><span>Firearm license application</span></div>
           <div class="btn-arrow">↗</div>
         </a>
-        <a class="app-btn live" href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener">
+        <a class="app-btn live reveal" href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener">
           <div class="btn-info"><strong>Section 16 — Dedicated Sports Shooter</strong><span>Firearm license application</span></div>
           <div class="btn-arrow">↗</div>
         </a>
-        <a class="app-btn live" href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener">
+        <a class="app-btn live reveal" href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener">
           <div class="btn-info"><strong>Section 20 — Business Use</strong><span>Firearm license application</span></div>
           <div class="btn-arrow">↗</div>
         </a>
-        <a class="app-btn live" href="https://tally.so/r/wA5D9W" target="_blank" rel="noopener">
+        <a class="app-btn live reveal" href="https://tally.so/r/wA5D9W" target="_blank" rel="noopener">
           <div class="btn-info"><strong>Competency Application</strong><span>Required competency certificate form</span></div>
           <div class="btn-arrow">↗</div>
         </a>
-        <a class="app-btn live" href="https://tally.so/r/wayeoZ" target="_blank" rel="noopener">
+        <a class="app-btn live reveal" href="https://tally.so/r/wayeoZ" target="_blank" rel="noopener">
           <div class="btn-info"><strong>Firearm Renewal</strong><span>Renew an existing license</span></div>
           <div class="btn-arrow">↗</div>
         </a>
-        <a class="app-btn live" href="https://tally.so/r/3l5eWk" target="_blank" rel="noopener">
+        <a class="app-btn live reveal" href="https://tally.so/r/3l5eWk" target="_blank" rel="noopener">
           <div class="btn-info"><strong>Testimony Application</strong><span>Supporting testimony form</span></div>
           <div class="btn-arrow">↗</div>
         </a>
 
-        <a class="app-btn plain" href="https://jdbfirearmlicense.lovable.app/" target="_blank" rel="noopener">
+        <a class="app-btn plain reveal" href="https://jdbfirearmlicense.lovable.app/" target="_blank" rel="noopener">
           <span style="font-size:.88rem;color:var(--muted);">Visit Our Official Website ↗</span>
         </a>
       </div>
@@ -397,6 +431,12 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
 <script>
 (function(){
   const motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* stagger delay for app-btn reveal */
+  document.querySelectorAll('.app-list .app-btn.reveal').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.07) + 's';
+  });
+
   const revealEls = document.querySelectorAll('.reveal');
   if (motionOk && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
@@ -405,6 +445,46 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
     revealEls.forEach(el => io.observe(el));
   } else {
     revealEls.forEach(el => el.classList.add('in-view'));
+  }
+
+  /* count-up stats */
+  const statNums = document.querySelectorAll('.stat-num');
+  const animateCount = (el) => {
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1400;
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    if (motionOk) requestAnimationFrame(step);
+    else el.textContent = target + suffix;
+  };
+  if (statNums.length) {
+    if (motionOk && 'IntersectionObserver' in window) {
+      const statIo = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statIo.unobserve(e.target); } });
+      }, { threshold: 0.4 });
+      statNums.forEach(el => statIo.observe(el));
+    } else {
+      statNums.forEach(el => { el.textContent = el.dataset.target + (el.dataset.suffix || ''); });
+    }
+  }
+
+  /* magnetic hover on application cards */
+  if (motionOk) {
+    document.querySelectorAll('.app-btn.live').forEach(el => {
+      el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const relX = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+        const relY = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+        el.style.transform = `translate(${relX * 5}px, ${relY * 5}px) rotateX(${relY * -3}deg) rotateY(${relX * 3}deg)`;
+      });
+      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+    });
   }
 
   if (motionOk) {
