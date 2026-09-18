@@ -14,29 +14,21 @@
 <!-- SEO META DESCRIPTION -->
 <meta name="description" content="Firearm License Assistance South Africa — Apply online for Section 13, Section 15, Section 16, Competency, Renewals & Testimonies. Powered by the Digital License Assist Method™ for fast, professional and SAPS-compliant firearm license guidance.">
 
-<!-- KEYWORDS -->
 <meta name="keywords" content="firearm license assistance, firearm motivation, section 13, section 15, section 16, firearm competency, firearm renewal, firearm testimony, Digital License Assist Method, Johan de Beer, South Africa gun license help">
-
-<!-- BRAND AUTHOR -->
 <meta name="author" content="Johan de Beer - Digital License Assist Method™">
-
-<!-- CANONICAL -->
 <link rel="canonical" href="https://johandebeer21.github.io/digital-license-assist-method/" />
 
-<!-- OPEN GRAPH -->
 <meta property="og:title" content="Digital License Assist Method™ – Firearm License Assistance" />
 <meta property="og:description" content="Professional firearm license assistance for Section 13, Section 15, Section 16, Competency & Renewals. Fully SAPS-compliant documents." />
 <meta property="og:image" content="https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/main/1765147256043.png" />
 <meta property="og:url" content="https://johandebeer21.github.io/digital-license-assist-method/" />
 <meta property="og:type" content="website" />
 
-<!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Digital License Assist Method™ – Firearm License Assistance">
 <meta name="twitter:description" content="Complete firearm license application assistance with SAPS-compliant documents and expert guidance.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/main/1765147256043.png">
 
-<!-- STRUCTURED DATA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,20 +51,25 @@
 
 <style>
 :root{
-  --bg:#070a10;
-  --surface:rgba(255,255,255,.04);
-  --surface-hover:rgba(255,255,255,.07);
+  --bg:#0a0c0f;
+  --bg-2:#111418;
+  --surface:rgba(255,255,255,.045);
+  --surface-hover:rgba(255,255,255,.075);
   --border:rgba(255,255,255,.09);
-  --border-2:rgba(255,255,255,.17);
-  --text:#eef0f3;
-  --muted:#8b93a3;
-  --gold:#c9a24d;
-  --gold-light:#e2c383;
-  --steel:#4d7fc4;
-  --r:20px;
-  --r-sm:14px;
-  --max:1160px;
+  --border-2:rgba(255,255,255,.18);
+  --text:#f1efe8;
+  --muted:#8c92a0;
+  --brass:#c9853f;
+  --brass-light:#e3a862;
+  --brass-dim:rgba(201,133,63,.16);
+  --steel:#5c6d80;
+  --steel-light:#93a5b8;
+  --steel-dim:rgba(92,109,128,.16);
+  --r:18px;
+  --r-sm:12px;
+  --max:1180px;
   --nav-h:76px;
+  --chamfer:22px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -83,146 +80,252 @@ body{
   min-height:100vh;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
+  line-height:1.5;
 }
+img{max-width:100%;display:block;}
+:focus-visible{ outline:2px solid var(--brass-light); outline-offset:3px; border-radius:4px; }
+a{color:inherit;}
 
 /* grain */
 body::after{
   content:"";
   position:fixed; inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events:none; z-index:999; opacity:.6;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:999; opacity:.55;
 }
 
-/* ambient glow */
-.orb{ position:fixed; border-radius:50%; pointer-events:none; z-index:-1; filter:blur(90px); animation:drift 22s ease-in-out infinite alternate; }
-.orb-1{ width:620px;height:620px; top:-200px; left:-140px; background:radial-gradient(circle, rgba(201,162,77,.10), transparent 70%); }
-.orb-2{ width:520px;height:520px; top:25%; right:-160px; background:radial-gradient(circle, rgba(77,127,196,.10), transparent 70%); animation-delay:-8s; }
-.orb-3{ width:420px;height:420px; bottom:8%; left:32%; background:radial-gradient(circle, rgba(201,162,77,.06), transparent 70%); animation-delay:-14s; }
-@keyframes drift{ from{transform:translate(0,0) scale(1);} to{transform:translate(28px,18px) scale(1.07);} }
+.orb{ position:fixed; border-radius:50%; pointer-events:none; z-index:-1; filter:blur(100px); animation:drift 24s ease-in-out infinite alternate; }
+.orb-1{ width:640px;height:640px; top:-220px; left:-160px; background:radial-gradient(circle, rgba(201,133,63,.09), transparent 70%); }
+.orb-2{ width:520px;height:520px; top:30%; right:-180px; background:radial-gradient(circle, rgba(92,109,128,.12), transparent 70%); animation-delay:-9s; }
+.orb-3{ width:420px;height:420px; bottom:6%; left:34%; background:radial-gradient(circle, rgba(201,133,63,.05), transparent 70%); animation-delay:-15s; }
+@keyframes drift{ from{transform:translate(0,0) scale(1);} to{transform:translate(26px,16px) scale(1.06);} }
+
+/* ── nameplate chamfer utility ── */
+.chamfer{
+  clip-path: polygon(0 0, calc(100% - var(--chamfer)) 0, 100% var(--chamfer), 100% 100%, 0 100%);
+  position:relative;
+}
+.chamfer::before{
+  content:"";
+  position:absolute; top:0; right:0;
+  width:0; height:0;
+  border-style:solid;
+  border-width:0 var(--chamfer) var(--chamfer) 0;
+  border-color:transparent rgba(255,255,255,.06) transparent transparent;
+  pointer-events:none;
+}
+.rivet{
+  position:absolute; width:5px; height:5px; border-radius:50%;
+  background:rgba(255,255,255,.16);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.03);
+}
 
 /* topbar */
-.topbar{ position:sticky; top:0; z-index:100; height:var(--nav-h); background:rgba(7,10,16,.82); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); }
+.topbar{ position:sticky; top:0; z-index:100; height:var(--nav-h); background:rgba(10,12,15,.84); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); }
 .topbar-inner{ max-width:var(--max); margin:0 auto; height:100%; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
 .brand{ display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--text); }
 .brand img{ height:44px; width:auto; max-width:170px; object-fit:contain; }
-.brand-text strong{ display:block; font-family:'Oswald',sans-serif; font-size:.92rem; letter-spacing:.05em; text-transform:uppercase; color:var(--text); }
+.brand-text strong{ display:block; font-family:'Oswald',sans-serif; font-weight:600; font-size:.94rem; letter-spacing:.01em; color:var(--text); }
 .brand-text span{ display:block; color:var(--muted); font-size:.74rem; margin-top:2px; }
 .topbar-right{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-.top-btn{ display:inline-flex; align-items:center; height:38px; padding:0 16px; border-radius:999px; text-decoration:none; border:1px solid var(--border); background:transparent; color:var(--muted); font-size:.82rem; transition:color .2s, border-color .2s, background .2s, transform .2s; }
+.top-btn{ display:inline-flex; align-items:center; height:38px; padding:0 16px; border-radius:999px; text-decoration:none; border:1px solid var(--border); background:transparent; color:var(--muted); font-size:.83rem; transition:color .2s, border-color .2s, background .2s, transform .2s; cursor:pointer; font-family:inherit; }
 .top-btn:hover{ color:var(--text); border-color:var(--border-2); background:var(--surface-hover); transform:translateY(-1px); }
-.top-btn.accent{ background:rgba(201,162,77,.12); border-color:rgba(201,162,77,.32); color:var(--gold-light); }
-.top-btn.accent:hover{ background:rgba(201,162,77,.2); border-color:rgba(201,162,77,.5); }
+.top-btn.accent{ background:var(--brass-dim); border-color:rgba(201,133,63,.34); color:var(--brass-light); }
+.top-btn.accent:hover{ background:rgba(201,133,63,.24); border-color:rgba(201,133,63,.55); }
 
-/* hero */
-.hero{ position:relative; min-height:calc(92svh - var(--nav-h)); display:flex; align-items:flex-end; overflow:hidden; border-bottom:1px solid var(--border); }
+/* ── hero ── */
+.hero{ position:relative; min-height:calc(94svh - var(--nav-h)); display:flex; align-items:flex-end; overflow:hidden; border-bottom:1px solid var(--border); }
 .hero-bg{
   position:absolute; inset:0;
   background:
-    linear-gradient(180deg, rgba(7,10,16,.74) 0%, rgba(7,10,16,.5) 38%, rgba(7,10,16,.88) 100%),
-    url('https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/main/360_F_472070989_b0jxzfspyQv1bFlWq8mJzPa2YWgWLWPn.jpg') center 32% / cover no-repeat;
-  filter:saturate(.85) contrast(1.05);
-  transform:scale(1.04);
-  animation:slowZoom 26s ease-in-out infinite alternate;
+    linear-gradient(180deg, rgba(10,12,15,.72) 0%, rgba(10,12,15,.55) 35%, rgba(10,12,15,.94) 100%),
+    url('https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/main/contrast-gun-metal-background-photo.jpg') center 42% / cover no-repeat;
+  filter:saturate(.8) contrast(1.12);
+  transform:scale(1.05);
+  animation:slowZoom 28s ease-in-out infinite alternate;
 }
-@keyframes slowZoom{ from{ transform:scale(1.04); } to{ transform:scale(1.11); } }
+@keyframes slowZoom{ from{ transform:scale(1.05); } to{ transform:scale(1.12); } }
 .hero-vignette{
   position:absolute; inset:0;
   background:
-    linear-gradient(to bottom, rgba(7,10,16,.35) 0%, rgba(7,10,16,0) 30%, rgba(7,10,16,0) 55%, rgba(7,10,16,.97) 100%),
-    linear-gradient(to right, rgba(7,10,16,.65) 0%, transparent 55%);
+    linear-gradient(to bottom, rgba(10,12,15,.32) 0%, rgba(10,12,15,0) 32%, rgba(10,12,15,0) 55%, rgba(10,12,15,.97) 100%),
+    linear-gradient(to right, rgba(10,12,15,.68) 0%, transparent 58%);
 }
+/* rifling motif — single deliberate orchestrated motion piece */
+.rifling{
+  position:absolute; z-index:1;
+  top:50%; right:-6%; transform:translateY(-50%);
+  width:min(52vw,620px); aspect-ratio:1/1;
+  border-radius:50%;
+  opacity:.5;
+  background:
+    repeating-conic-gradient(from 0deg,
+      rgba(201,133,63,.16) 0deg 2deg,
+      transparent 2deg 14deg);
+  -webkit-mask-image: radial-gradient(circle, black 34%, transparent 70%);
+  mask-image: radial-gradient(circle, black 34%, transparent 70%);
+  animation: rifleSpin 90s linear infinite;
+  pointer-events:none;
+}
+@keyframes rifleSpin{ to{ transform:translateY(-50%) rotate(360deg); } }
 .hero-content{ position:relative; z-index:2; max-width:var(--max); width:100%; margin:0 auto; padding:64px 24px 76px; display:grid; grid-template-columns:1fr 340px; gap:28px; align-items:end; }
 .hero-copy{ max-width:680px; }
-.kicker{ display:inline-flex; align-items:center; gap:10px; padding:8px 16px; border-radius:999px; border:1px solid rgba(201,162,77,.3); background:rgba(201,162,77,.06); color:var(--gold-light); font-size:.78rem; letter-spacing:.02em; margin-bottom:22px; animation:fadeUp .7s ease both; animation-delay:.1s; }
-.kicker-dot{ width:7px; height:7px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 5px rgba(201,162,77,.18); animation:pulseRing 2.4s ease infinite; }
-@keyframes pulseRing{ 0%,100%{box-shadow:0 0 0 3px rgba(201,162,77,.18);} 50%{box-shadow:0 0 0 8px rgba(201,162,77,0);} }
-.hero h1{ font-family:'Oswald',sans-serif; font-weight:600; font-size:clamp(2.6rem,6vw,4.4rem); line-height:1.05; letter-spacing:.005em; color:var(--text); animation:fadeUp .8s ease both; animation-delay:.2s; }
-.hero h1 .line2{ color:var(--gold-light); }
-.hero-sub{ margin-top:22px; color:#b7bcc6; font-size:1.05rem; line-height:1.72; max-width:52ch; animation:fadeUp .8s ease both; animation-delay:.35s; }
+.kicker{ display:inline-flex; align-items:center; gap:10px; padding:8px 16px 8px 12px; border-radius:999px; border:1px solid rgba(201,133,63,.32); background:var(--brass-dim); color:var(--brass-light); font-size:.82rem; margin-bottom:22px; animation:fadeUp .7s ease both; animation-delay:.1s; }
+.kicker-dot{ width:7px; height:7px; border-radius:50%; background:var(--brass); box-shadow:0 0 0 5px rgba(201,133,63,.2); animation:pulseRing 2.4s ease infinite; }
+@keyframes pulseRing{ 0%,100%{box-shadow:0 0 0 3px rgba(201,133,63,.2);} 50%{box-shadow:0 0 0 8px rgba(201,133,63,0);} }
+.hero h1{ font-family:'Oswald',sans-serif; font-weight:600; font-size:clamp(2.5rem,5.6vw,4.3rem); line-height:1.06; letter-spacing:-.005em; color:var(--text); animation:fadeUp .8s ease both; animation-delay:.2s; }
+.hero h1 .line2{ color:var(--brass-light); }
+.hero-sub{ margin-top:22px; color:#b9bdc7; font-size:1.05rem; line-height:1.72; max-width:52ch; animation:fadeUp .8s ease both; animation-delay:.35s; }
 .hero-actions{ margin-top:32px; display:flex; flex-wrap:wrap; gap:12px; animation:fadeUp .8s ease both; animation-delay:.5s; }
-.cta-primary{ display:inline-flex; align-items:center; gap:10px; height:54px; padding:0 28px; border-radius:999px; background:linear-gradient(160deg, var(--gold-light) 0%, var(--gold) 100%); color:#231a05; font-weight:600; font-size:.92rem; text-decoration:none; border:none; box-shadow:0 12px 36px rgba(201,162,77,.24), 0 0 0 1px rgba(201,162,77,.4); transition:transform .25s ease, box-shadow .25s ease; }
-.cta-primary:hover{ transform:translateY(-3px); box-shadow:0 18px 48px rgba(201,162,77,.34), 0 0 0 1px rgba(201,162,77,.55); }
-.cta-ghost{ display:inline-flex; align-items:center; gap:10px; height:54px; padding:0 28px; border-radius:999px; background:rgba(255,255,255,.04); border:1px solid var(--border-2); color:var(--text); font-size:.92rem; text-decoration:none; transition:transform .25s, background .25s, border-color .25s; }
+.cta-primary{ display:inline-flex; align-items:center; gap:10px; height:54px; padding:0 28px; border-radius:999px; background:linear-gradient(160deg, var(--brass-light) 0%, var(--brass) 100%); color:#221604; font-weight:600; font-size:.92rem; text-decoration:none; border:none; box-shadow:0 12px 36px rgba(201,133,63,.24), 0 0 0 1px rgba(201,133,63,.4); transition:transform .25s ease, box-shadow .25s ease; cursor:pointer; font-family:inherit; }
+.cta-primary:hover{ transform:translateY(-3px); box-shadow:0 18px 48px rgba(201,133,63,.34), 0 0 0 1px rgba(201,133,63,.55); }
+.cta-ghost{ display:inline-flex; align-items:center; gap:10px; height:54px; padding:0 28px; border-radius:999px; background:rgba(255,255,255,.04); border:1px solid var(--border-2); color:var(--text); font-size:.92rem; text-decoration:none; transition:transform .25s, background .25s, border-color .25s; cursor:pointer; font-family:inherit; }
 .cta-ghost:hover{ transform:translateY(-3px); background:rgba(255,255,255,.07); border-color:rgba(255,255,255,.28); }
 
-.hero-panel{ background:rgba(255,255,255,.04); border:1px solid var(--border-2); border-radius:var(--r); padding:22px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); box-shadow:0 24px 64px rgba(0,0,0,.45); animation:fadeUp .9s ease both; animation-delay:.55s; }
-.panel-title{ font-family:'Oswald',sans-serif; font-size:.82rem; letter-spacing:.03em; text-transform:uppercase; color:var(--gold-light); margin-bottom:16px; }
+.hero-panel{ background:rgba(255,255,255,.04); border:1px solid var(--border-2); padding:22px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); box-shadow:0 24px 64px rgba(0,0,0,.5); animation:fadeUp .9s ease both; animation-delay:.55s; }
+.panel-title{ font-family:'Oswald',sans-serif; font-size:.86rem; letter-spacing:.01em; color:var(--brass-light); margin-bottom:16px; }
 .steps-list{ display:flex; flex-direction:column; gap:10px; position:relative; }
 .steps-list::before{
   content:"";
-  position:absolute; left:27px; top:26px; bottom:26px; width:2px;
-  background:linear-gradient(180deg, var(--gold-light), rgba(201,162,77,.1));
+  position:absolute; left:15px; top:26px; bottom:26px; width:1px;
+  background:linear-gradient(180deg, var(--brass-light), rgba(201,133,63,.08));
   transform:scaleY(0); transform-origin:top;
   animation:drawLine 1s ease forwards; animation-delay:1.1s;
 }
 @keyframes drawLine{ to{ transform:scaleY(1); } }
-.step{ display:flex; align-items:flex-start; gap:12px; padding:13px 14px; border-radius:13px; background:rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.06); position:relative; transition:border-color .2s, background .2s; }
-.step:hover{ background:rgba(0,0,0,.35); border-color:rgba(201,162,77,.2); }
-.step-num{ width:26px; height:26px; border-radius:8px; flex:0 0 auto; display:grid; place-items:center; background:rgba(201,162,77,.12); border:1px solid rgba(201,162,77,.22); color:var(--gold-light); font-size:.8rem; font-weight:700; }
-.step-text{ font-size:.87rem; color:#d7d3ca; line-height:1.48; padding-top:3px; }
+.step{ display:flex; align-items:flex-start; gap:12px; padding:13px 14px; border-radius:12px; background:rgba(0,0,0,.28); border:1px solid rgba(255,255,255,.06); position:relative; transition:border-color .2s, background .2s; }
+.step:hover{ background:rgba(0,0,0,.38); border-color:rgba(201,133,63,.22); }
+.hex{ width:30px; height:26px; flex:0 0 auto; display:grid; place-items:center; background:var(--brass-dim); border:1px solid rgba(201,133,63,.28); color:var(--brass-light); font-size:.78rem; font-weight:700; clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%); }
+.step-text{ font-size:.87rem; color:#d7d5cd; line-height:1.48; padding-top:2px; }
 
-/* trust strip */
+/* stat strip */
 .stat-strip{ max-width:var(--max); margin:0 auto; padding:44px 24px; border-bottom:1px solid var(--border); display:flex; flex-wrap:wrap; justify-content:center; gap:48px; }
-.stat{ text-align:center; min-width:150px; }
-.stat-num{ display:block; font-family:'Oswald',sans-serif; font-weight:600; font-size:2.1rem; color:var(--gold-light); line-height:1; }
-.stat-label{ display:block; margin-top:8px; font-size:.8rem; color:var(--muted); letter-spacing:.01em; }
-@media (max-width:640px){ .stat-strip{ gap:28px; padding:32px 20px; } .stat-num{ font-size:1.7rem; } }
+.stat{ text-align:center; min-width:140px; }
+.stat-num{ display:block; font-family:'Oswald',sans-serif; font-weight:600; font-size:2.1rem; color:var(--brass-light); line-height:1; }
+.stat-label{ display:block; margin-top:8px; font-size:.8rem; color:var(--muted); }
+@media (max-width:640px){ .stat-strip{ gap:26px; padding:32px 20px; } .stat-num{ font-size:1.7rem; } }
 
 /* section */
-.section{ max-width:var(--max); margin:0 auto; padding:76px 24px; }
-.section-label{ font-family:'Oswald',sans-serif; font-size:.8rem; letter-spacing:.03em; color:var(--gold); margin-bottom:10px; }
-.section-title{ font-family:'Oswald',sans-serif; font-weight:600; font-size:clamp(1.8rem,3.4vw,2.6rem); line-height:1.1; }
-.section-sub{ margin-top:10px; color:var(--muted); font-size:.98rem; line-height:1.72; max-width:56ch; }
+.section{ max-width:var(--max); margin:0 auto; padding:80px 24px; }
+.section-label{ font-family:'Oswald',sans-serif; font-size:.84rem; color:var(--brass); margin-bottom:10px; }
+.section-title{ font-family:'Oswald',sans-serif; font-weight:600; font-size:clamp(1.8rem,3.4vw,2.6rem); line-height:1.12; }
+.section-sub{ margin-top:10px; color:var(--muted); font-size:.98rem; line-height:1.72; max-width:58ch; }
 
-/* portal grid */
-.portal-grid{ margin-top:36px; display:grid; grid-template-columns:1fr 320px; gap:20px; align-items:start; }
-.portal-card{ background:rgba(255,255,255,.04); border:1px solid var(--border); border-radius:var(--r); padding:28px; box-shadow:0 16px 48px rgba(0,0,0,.28); }
-.portal-intro{ margin-bottom:24px; }
-.portal-intro h4{ font-family:'Oswald',sans-serif; font-size:1.1rem; margin-bottom:6px; font-weight:500; }
-.portal-intro p{ color:var(--muted); font-size:.9rem; line-height:1.65; }
+/* ══ FINDER WIZARD ══ */
+.wizard-wrap{ background:var(--bg-2); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.wizard-panel{
+  margin-top:36px; max-width:720px;
+  background:rgba(255,255,255,.035); border:1px solid var(--border-2);
+  padding:32px; position:relative;
+  box-shadow:0 20px 56px rgba(0,0,0,.4);
+}
+.wizard-panel .rivet:nth-of-type(1){ top:14px; left:14px; }
+.wizard-panel .rivet:nth-of-type(2){ bottom:14px; left:14px; }
+.wp-progress{ display:flex; gap:6px; margin-bottom:26px; }
+.wp-dot{ height:4px; flex:1; border-radius:2px; background:rgba(255,255,255,.08); transition:background .3s; }
+.wp-dot.done{ background:var(--brass); }
+.w-step{ display:none; animation:wStepIn .4s ease both; }
+.w-step.active{ display:block; }
+@keyframes wStepIn{ from{ opacity:0; transform:translateX(14px); } to{ opacity:1; transform:translateX(0); } }
+.w-q{ font-family:'Oswald',sans-serif; font-size:1.28rem; font-weight:500; margin-bottom:20px; }
+.w-options{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:560px){ .w-options{ grid-template-columns:1fr; } }
+.w-opt{
+  text-align:left; padding:16px 18px; border-radius:12px;
+  background:rgba(255,255,255,.03); border:1px solid var(--border);
+  color:var(--text); font-family:inherit; font-size:.92rem; cursor:pointer;
+  transition:border-color .2s, background .2s, transform .2s;
+}
+.w-opt:hover{ border-color:rgba(201,133,63,.42); background:rgba(201,133,63,.07); transform:translateY(-2px); }
+.w-back{ margin-top:20px; background:none; border:none; color:var(--muted); font-family:inherit; font-size:.84rem; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+.w-back:hover{ color:var(--text); }
+.w-result-card{ background:rgba(201,133,63,.07); border:1px solid rgba(201,133,63,.28); border-radius:14px; padding:22px; display:flex; flex-direction:column; gap:6px; }
+.w-result-card strong{ font-family:'Oswald',sans-serif; font-size:1.1rem; font-weight:500; }
+.w-result-card span{ color:var(--muted); font-size:.9rem; }
+.w-result-cta{ margin-top:14px; display:inline-flex; align-items:center; gap:8px; width:fit-content; padding:13px 22px; border-radius:999px; background:linear-gradient(160deg, var(--brass-light), var(--brass)); color:#221604; font-weight:600; font-size:.88rem; text-decoration:none; }
 
-.app-list{ display:flex; flex-direction:column; gap:10px; perspective:900px; }
-.app-btn{ display:flex; align-items:center; justify-content:space-between; gap:14px; padding:16px 18px; border-radius:14px; text-decoration:none; border:1px solid var(--border); background:rgba(255,255,255,.03); color:var(--text); transition:transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease; }
-.app-btn:visited{ color:var(--text); }
-.app-btn.live{ border-color:rgba(201,162,77,.28); background:linear-gradient(160deg, rgba(201,162,77,.09) 0%, rgba(201,162,77,.03) 100%); box-shadow:0 4px 24px rgba(201,162,77,.08), inset 0 1px 0 rgba(255,255,255,.06); }
-.app-btn.live:hover{ transform:translateY(-3px); border-color:rgba(201,162,77,.5); box-shadow:0 12px 36px rgba(201,162,77,.18), inset 0 1px 0 rgba(255,255,255,.08); }
-.app-btn.plain{ justify-content:center; background:transparent; border:1px solid var(--border); }
-.app-btn.plain:hover{ transform:translateY(-2px); background:var(--surface-hover); }
+/* ══ TIMELINE ══ */
+.timeline{ position:relative; margin-top:44px; padding-left:40px; }
+.timeline::before{
+  content:""; position:absolute; left:14px; top:6px; bottom:6px; width:2px;
+  background:rgba(255,255,255,.08);
+}
+.timeline-fill{
+  content:""; position:absolute; left:14px; top:6px; width:2px;
+  background:linear-gradient(180deg, var(--brass-light), var(--steel));
+  height:0%; transition:height 1.2s ease;
+}
+.t-item{ position:relative; padding-bottom:40px; }
+.t-item:last-child{ padding-bottom:0; }
+.t-hex{ position:absolute; left:-40px; top:0; width:30px; height:26px; display:grid; place-items:center; background:var(--bg); border:1px solid rgba(201,133,63,.3); color:var(--brass-light); font-size:.76rem; font-weight:700; clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%); }
+.t-item h4{ font-family:'Oswald',sans-serif; font-weight:500; font-size:1.05rem; margin-bottom:6px; }
+.t-item p{ color:var(--muted); font-size:.9rem; line-height:1.65; max-width:52ch; }
 
-.btn-info{ display:flex; flex-direction:column; gap:3px; }
-.btn-info strong{ font-size:.98rem; font-weight:500; color:var(--text); }
-.btn-info span{ font-size:.82rem; color:var(--muted); }
-.btn-arrow{ width:34px; height:34px; border-radius:50%; flex:0 0 auto; display:grid; place-items:center; background:rgba(201,162,77,.12); border:1px solid rgba(201,162,77,.22); color:var(--gold-light); font-size:1rem; transition:transform .2s ease, background .2s ease; }
-.app-btn.live:hover .btn-arrow{ transform:rotate(45deg); background:rgba(201,162,77,.22); }
+/* ══ APPLICATIONS ══ */
+.app-groups{ margin-top:36px; display:flex; flex-direction:column; gap:36px; }
+.app-group h3{ font-family:'Oswald',sans-serif; font-weight:500; font-size:1rem; color:var(--steel-light); margin-bottom:14px; }
+.app-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:14px; }
+.app-card{
+  background:var(--bg-2); border:1px solid var(--border);
+  padding:20px; text-decoration:none; color:var(--text);
+  display:flex; flex-direction:column; gap:10px;
+  transition:transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+  position:relative;
+}
+.app-card .rivet:nth-of-type(1){ top:10px; left:10px; }
+.app-card:hover{ transform:translateY(-3px); border-color:rgba(201,133,63,.4); box-shadow:0 14px 32px rgba(201,133,63,.12); }
+.app-card.pulse{ animation:cardPulse 1.6s ease 2; border-color:var(--brass-light); }
+@keyframes cardPulse{ 0%,100%{ box-shadow:0 0 0 0 rgba(201,133,63,.5);} 50%{ box-shadow:0 0 0 8px rgba(201,133,63,0);} }
+.app-card-icon{ width:34px; height:34px; display:grid; place-items:center; color:var(--brass-light); }
+.app-card-icon svg{ width:20px; height:20px; }
+.app-card strong{ font-family:'Oswald',sans-serif; font-weight:500; font-size:1rem; }
+.app-card span{ color:var(--muted); font-size:.84rem; line-height:1.5; }
+.app-card-arrow{ margin-top:auto; align-self:flex-end; width:30px; height:30px; border-radius:50%; display:grid; place-items:center; background:rgba(201,133,63,.1); border:1px solid rgba(201,133,63,.22); color:var(--brass-light); font-size:.9rem; transition:transform .2s ease, background .2s ease; }
+.app-card:hover .app-card-arrow{ transform:rotate(45deg); background:rgba(201,133,63,.22); }
 
-/* side box */
-.side-card{ background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:var(--r); padding:24px; }
-.side-card h4{ font-family:'Oswald',sans-serif; font-size:1rem; margin-bottom:16px; font-weight:500; }
-.checklist{ list-style:none; display:flex; flex-direction:column; gap:10px; }
-.checklist li{ display:flex; align-items:flex-start; gap:12px; padding:13px 14px; border-radius:12px; background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.06); font-size:.88rem; color:#cfd2d9; line-height:1.55; }
-.check-icon{ width:22px; height:22px; border-radius:50%; flex:0 0 auto; display:grid; place-items:center; background:linear-gradient(135deg, var(--gold-light), var(--gold)); color:#231a05; font-size:.7rem; font-weight:900; }
+/* ══ WHY US ══ */
+.why-wrap{ position:relative; background:var(--bg-2); border-top:1px solid var(--border); border-bottom:1px solid var(--border); overflow:hidden; }
+.why-bg{
+  position:absolute; inset:0; z-index:0;
+  background:
+    linear-gradient(100deg, rgba(10,12,15,.94) 30%, rgba(10,12,15,.78) 100%),
+    url('https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/main/contrast-gun-metal-background-photo.jpg') right center / cover no-repeat;
+  filter:grayscale(.35) saturate(.7) contrast(1.1);
+  opacity:.5;
+}
+.why-inner{ position:relative; z-index:1; }
+.tags{ margin-top:36px; display:flex; flex-direction:column; gap:1px; background:var(--border); }
+.tag-row{ background:var(--bg-2); padding:22px 6px; display:grid; grid-template-columns:44px 1fr; gap:18px; align-items:flex-start; }
+.tag-icon{ width:44px; height:44px; display:grid; place-items:center; color:var(--steel-light); border:1px solid rgba(92,109,128,.3); background:var(--steel-dim); clip-path:polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%); }
+.tag-icon svg{ width:20px; height:20px; }
+.tag-row h4{ font-family:'Oswald',sans-serif; font-weight:500; font-size:1.02rem; margin-bottom:5px; }
+.tag-row p{ color:var(--muted); font-size:.9rem; line-height:1.65; max-width:56ch; }
 
-.side-cta{ margin-top:16px; display:flex; align-items:center; gap:12px; padding:16px 18px; border-radius:14px; text-decoration:none; border:1px solid rgba(77,127,196,.24); background:rgba(77,127,196,.06); transition:transform .22s, background .22s, border-color .22s, box-shadow .22s; }
-.side-cta:hover{ transform:translateY(-2px); background:rgba(77,127,196,.1); border-color:rgba(77,127,196,.4); box-shadow:0 8px 28px rgba(77,127,196,.14); }
-.side-cta-icon{ width:38px; height:38px; border-radius:10px; flex:0 0 auto; display:grid; place-items:center; background:rgba(77,127,196,.14); border:1px solid rgba(77,127,196,.22); color:#a8c4ea; font-size:1.1rem; }
-.side-cta{ color:var(--text); }
-.side-cta:visited{ color:var(--text); }
-.side-cta-text strong{ display:block; font-size:.92rem; color:var(--text); }
-.side-cta-text span{ display:block; font-size:.78rem; color:var(--muted); margin-top:2px; }
+/* ══ FAQ ══ */
+.faq-list{ margin-top:32px; display:flex; flex-direction:column; gap:10px; max-width:760px; }
+.faq-item{ background:var(--bg-2); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.faq-item summary{ list-style:none; cursor:pointer; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; font-family:'Oswald',sans-serif; font-weight:500; font-size:.98rem; }
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-plus{ width:22px; height:22px; flex:0 0 auto; position:relative; }
+.faq-plus::before, .faq-plus::after{ content:""; position:absolute; background:var(--brass-light); border-radius:2px; transition:transform .25s ease; }
+.faq-plus::before{ width:14px; height:2px; top:10px; left:4px; }
+.faq-plus::after{ width:2px; height:14px; top:4px; left:10px; }
+.faq-item[open] .faq-plus::after{ transform:rotate(90deg); opacity:0; }
+.faq-item p{ padding:0 20px 20px; color:var(--muted); font-size:.9rem; line-height:1.7; max-width:64ch; }
 
 /* footer */
-footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:linear-gradient(180deg,#080b12,var(--bg)); }
+footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:linear-gradient(180deg,#080a0d,var(--bg)); }
 .footer-inner{ max-width:var(--max); margin:0 auto; }
 .footer-top{ display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center; margin-bottom:36px; }
 .footer-brand{ display:flex; align-items:flex-start; gap:16px; }
 .footer-brand img{ height:52px; width:auto; object-fit:contain; }
-.footer-brand h5{ font-family:'Oswald',sans-serif; font-size:.92rem; letter-spacing:.02em; margin-bottom:6px; font-weight:500; }
+.footer-brand h5{ font-family:'Oswald',sans-serif; font-size:.94rem; margin-bottom:6px; font-weight:500; }
 .footer-brand p{ color:var(--muted); font-size:.87rem; line-height:1.65; max-width:38ch; }
 .footer-bottom{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; padding-top:20px; border-top:1px solid rgba(255,255,255,.06); color:#565b66; font-size:.78rem; }
 
 /* whatsapp fab */
 .fab-wrap{ position:fixed; right:20px; bottom:20px; z-index:120; display:flex; align-items:center; gap:10px; }
-.fab-label{ padding:11px 18px; border-radius:999px; background:rgba(7,10,16,.9); border:1px solid var(--border-2); color:var(--text); font-size:.84rem; text-decoration:none; box-shadow:0 12px 32px rgba(0,0,0,.5); transition:transform .2s, background .2s; white-space:nowrap; }
+.fab-label{ padding:11px 18px; border-radius:999px; background:rgba(10,12,15,.9); border:1px solid var(--border-2); color:var(--text); font-size:.84rem; text-decoration:none; box-shadow:0 12px 32px rgba(0,0,0,.5); transition:transform .2s, background .2s; white-space:nowrap; }
 .fab-label:hover{ transform:translateY(-2px); background:rgba(20,20,20,.95); }
 .fab-btn{ width:56px; height:56px; border-radius:50%; display:grid; place-items:center; background:#25D366; box-shadow:0 14px 32px rgba(37,211,102,.28), 0 0 0 1px rgba(37,211,102,.3); text-decoration:none; border:none; transition:transform .25s ease, box-shadow .25s ease; animation:fabPop .6s cubic-bezier(.34,1.56,.64,1) both; animation-delay:1s; position:relative; }
 .fab-btn::after{ content:""; position:absolute; inset:-6px; border-radius:50%; border:2px solid rgba(37,211,102,.55); animation:sonarPing 2.8s ease-out infinite; animation-delay:2s; pointer-events:none; }
@@ -231,15 +334,16 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
 .fab-btn img{ width:28px; height:28px; }
 @keyframes fabPop{ from{opacity:0; transform:scale(.4);} to{opacity:1; transform:scale(1);} }
 
-.reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+.reveal{ opacity:0; transform:translateY(20px); transition:opacity .7s ease, transform .7s ease; }
 .reveal.in-view{ opacity:1; transform:translateY(0); }
 
 @keyframes fadeUp{ from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);} }
 
 @media (max-width:900px){
   .hero-content{ grid-template-columns:1fr; padding:48px 20px 56px; }
-  .portal-grid{ grid-template-columns:1fr; }
+  .tag-row{ grid-template-columns:38px 1fr; }
   .footer-top{ grid-template-columns:1fr; }
+  .rifling{ opacity:.3; width:80vw; }
 }
 @media (max-width:760px){
   .brand-text span{ display:none; }
@@ -247,17 +351,16 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
 }
 @media (max-width:480px){
   :root{ --nav-h:60px; }
-  .topbar-inner{ padding:0 12px; gap:8px; }
+  .topbar-inner{ padding:0 12px; gap:6px; }
   .brand img{ height:32px; }
   .brand-text{ display:none; }
-  .top-btn{ height:30px; padding:0 10px; font-size:.7rem; }
+  .top-btn{ height:30px; padding:0 9px; font-size:.68rem; }
 }
 @media (max-width:640px){
   .hero-content{ padding:36px 16px 48px; }
   .cta-primary,.cta-ghost{ height:48px; padding:0 20px; font-size:.86rem; }
-  .section{ padding:52px 16px; }
-  .portal-card{ padding:20px 16px; }
-  .side-card{ padding:18px 16px; }
+  .section{ padding:56px 16px; }
+  .wizard-panel{ padding:22px 18px; }
   .fab-label{ display:none; }
   .fab-wrap{ right:16px; bottom:16px; }
 }
@@ -281,7 +384,9 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
       </div>
     </a>
     <div class="topbar-right">
+      <a class="top-btn" href="#finder">Find My Licence</a>
       <a class="top-btn" href="#applications">Applications</a>
+      <a class="top-btn" href="#faq">FAQ</a>
       <a class="top-btn accent" href="https://jdbfirearmlicense.lovable.app/" target="_blank" rel="noopener">Website ↗</a>
     </div>
   </div>
@@ -290,6 +395,7 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-bg" aria-hidden="true"></div>
+  <div class="rifling" aria-hidden="true"></div>
   <div class="hero-vignette" aria-hidden="true"></div>
   <div class="hero-content">
     <div class="hero-copy">
@@ -298,16 +404,16 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
       <p class="hero-sub">Fast-tracking Section 13, 15, 16 and 20 applications, competency, renewals and testimonies with SAPS-compliant documents — start with the correct form below and our team handles the rest.</p>
       <div class="hero-actions">
         <a class="cta-primary" href="https://tally.so/r/wogW1b" target="_blank" rel="noopener">Start Section 13 Application <span>→</span></a>
-        <a class="cta-ghost" href="#applications">View All Applications</a>
+        <button class="cta-ghost" onclick="document.getElementById('finder').scrollIntoView({behavior:'smooth'})">Not sure? Find my licence</button>
       </div>
     </div>
 
     <aside class="hero-panel">
       <p class="panel-title">How it works</p>
       <div class="steps-list">
-        <div class="step"><div class="step-num">1</div><p class="step-text">Select the licence category that applies to you</p></div>
-        <div class="step"><div class="step-num">2</div><p class="step-text">Complete the online form with your details</p></div>
-        <div class="step"><div class="step-num">3</div><p class="step-text">Our team prepares your SAPS-compliant application</p></div>
+        <div class="step"><div class="hex">1</div><p class="step-text">Select the licence category that applies to you</p></div>
+        <div class="step"><div class="hex">2</div><p class="step-text">Complete the online form with your details</p></div>
+        <div class="step"><div class="hex">3</div><p class="step-text">Our team prepares your SAPS-compliant application</p></div>
       </div>
     </aside>
   </div>
@@ -320,8 +426,12 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
     <span class="stat-label">Licence Categories</span>
   </div>
   <div class="stat">
-    <span class="stat-num" data-target="100" data-suffix="%">0</span>
-    <span class="stat-label">SAPS-Compliant Documentation</span>
+    <span class="stat-num" data-target="300" data-suffix="+">0</span>
+    <span class="stat-label">Clients Assisted, 100% Approval Rate</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num" data-target="9">0</span>
+    <span class="stat-label">Provinces Served</span>
   </div>
   <div class="stat">
     <span class="stat-num" data-target="1">0</span>
@@ -329,75 +439,258 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
   </div>
 </section>
 
-<!-- APPLICATIONS -->
+<!-- ══ FINDER WIZARD ══ -->
+<section class="wizard-wrap" id="finder">
+  <div class="section">
+    <div class="reveal">
+      <p class="section-label">Not sure where to start</p>
+      <h2 class="section-title">Find your application in three questions</h2>
+      <p class="section-sub">Answer a few short questions and we'll point you straight to the correct form — no guessing which section applies to you.</p>
+    </div>
+
+    <div class="wizard-panel reveal" style="transition-delay:.1s">
+      <span class="rivet"></span><span class="rivet"></span>
+      <div class="wp-progress">
+        <span class="wp-dot" data-dot="1"></span>
+        <span class="wp-dot" data-dot="2"></span>
+        <span class="wp-dot" data-dot="3"></span>
+      </div>
+
+      <div class="wizard-steps">
+        <div class="w-step active" data-step="start">
+          <p class="w-q">What do you need?</p>
+          <div class="w-options">
+            <button class="w-opt" data-goto="purpose">A new firearm licence</button>
+            <button class="w-opt" data-result="renew">Renew an existing licence</button>
+            <button class="w-opt" data-result="comp">Competency certificate only</button>
+            <button class="w-opt" data-result="testimony">Supporting testimony</button>
+          </div>
+        </div>
+
+        <div class="w-step" data-step="purpose">
+          <p class="w-q">What's the licence for?</p>
+          <div class="w-options">
+            <button class="w-opt" data-result="s13">Self-defence</button>
+            <button class="w-opt" data-goto="hunting">Hunting</button>
+            <button class="w-opt" data-goto="sport">Sport shooting</button>
+            <button class="w-opt" data-result="s20">Business use</button>
+          </div>
+          <button class="w-back" data-back="start">← Back</button>
+        </div>
+
+        <div class="w-step" data-step="hunting">
+          <p class="w-q">How often will you hunt?</p>
+          <div class="w-options">
+            <button class="w-opt" data-result="s15">Occasionally</button>
+            <button class="w-opt" data-result="s16h">Regularly, as a dedicated hunter</button>
+          </div>
+          <button class="w-back" data-back="purpose">← Back</button>
+        </div>
+
+        <div class="w-step" data-step="sport">
+          <p class="w-q">How often will you compete?</p>
+          <div class="w-options">
+            <button class="w-opt" data-result="s15">Occasionally</button>
+            <button class="w-opt" data-result="s16s">Regularly, as a dedicated sport shooter</button>
+          </div>
+          <button class="w-back" data-back="purpose">← Back</button>
+        </div>
+
+        <div class="w-step" data-step="result">
+          <p class="w-q">This is your form</p>
+          <div class="w-result-card">
+            <strong id="wResultTitle">—</strong>
+            <span id="wResultDesc">—</span>
+            <a id="wResultLink" class="w-result-cta" target="_blank" rel="noopener">Start this application →</a>
+          </div>
+          <button class="w-back" data-back="start">Start over</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW THE PROCESS WORKS ══ -->
+<section class="section">
+  <div class="reveal">
+    <p class="section-label">Process</p>
+    <h2 class="section-title">From form to firearm, step by step</h2>
+    <p class="section-sub">Once you submit a form, here's what happens on our side before your licence is in hand.</p>
+  </div>
+
+  <div class="timeline reveal" id="timelineTrack" style="transition-delay:.1s">
+    <div class="timeline-fill" id="timelineFill"></div>
+    <div class="t-item">
+      <div class="t-hex">1</div>
+      <h4>Form submitted</h4>
+      <p>You complete the correct online form with your personal and firearm details.</p>
+    </div>
+    <div class="t-item">
+      <div class="t-hex">2</div>
+      <h4>Documents prepared</h4>
+      <p>We draw up your SAPS-compliant motivation and supporting documentation.</p>
+    </div>
+    <div class="t-item">
+      <div class="t-hex">3</div>
+      <h4>SAPS submission</h4>
+      <p>Your completed application is lodged with the relevant SAPS Designated Firearms Officer.</p>
+    </div>
+    <div class="t-item">
+      <div class="t-hex">4</div>
+      <h4>Tracking &amp; follow-up</h4>
+      <p>We follow up on your behalf and keep you updated as your application moves through the process.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ APPLICATIONS ══ -->
 <section class="section" id="applications">
   <div class="reveal">
     <p class="section-label">Portal</p>
-    <h2 class="section-title">Application Links</h2>
-    <p class="section-sub">Select the application that applies to your firearm licence category. Not sure which one you need? Message us on WhatsApp and we'll point you to the right form.</p>
+    <h2 class="section-title">Application links</h2>
+    <p class="section-sub">Select the application that applies to your firearm licence category, or use the finder above if you're unsure.</p>
   </div>
 
-  <div class="portal-grid">
-    <div class="portal-card reveal" style="transition-delay:.1s">
-      <div class="portal-intro">
-        <h4>Select Your Application</h4>
-        <p>Each link opens a secure online form. Use the correct section for your licence type.</p>
-      </div>
-
-      <div class="app-list">
-        <a class="app-btn live reveal" href="https://tally.so/r/wogW1b" target="_blank" rel="noopener">
-          <div class="btn-info"><strong>Section 13 — Self-Defence</strong><span>Firearm license for self-defense</span></div>
-          <div class="btn-arrow">↗</div>
+  <div class="app-groups">
+    <div class="app-group reveal" style="transition-delay:.1s">
+      <h3>New licence applications</h3>
+      <div class="app-grid">
+        <a class="app-card" data-key="s13" href="https://tally.so/r/wogW1b" target="_blank" rel="noopener">
+          <span class="rivet"></span>
+          <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg></div>
+          <strong>Section 13 — Self-Defence</strong>
+          <span>Firearm license for self-defense</span>
+          <div class="app-card-arrow">↗</div>
         </a>
-        <a class="app-btn live reveal" href="https://tally.so/r/w82OJA" target="_blank" rel="noopener">
-          <div class="btn-info"><strong>Section 15 — Occasional Hunting & Shooting</strong><span>Firearm license application</span></div>
-          <div class="btn-arrow">↗</div>
+        <a class="app-card" data-key="s15" href="https://tally.so/r/w82OJA" target="_blank" rel="noopener">
+          <span class="rivet"></span>
+          <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l7-15 7 15"/><path d="M8 15h6"/></svg></div>
+          <strong>Section 15 — Occasional Hunting &amp; Shooting</strong>
+          <span>Firearm license application</span>
+          <div class="app-card-arrow">↗</div>
         </a>
-        <a class="app-btn live reveal" href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener">
-          <div class="btn-info"><strong>Section 16 — Dedicated Hunter</strong><span>Firearm license application</span></div>
-          <div class="btn-arrow">↗</div>
+        <a class="app-card" data-key="s16h" href="https://tally.so/r/wMPoX0" target="_blank" rel="noopener">
+          <span class="rivet"></span>
+          <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div>
+          <strong>Section 16 — Dedicated Hunter</strong>
+          <span>Firearm license application</span>
+          <div class="app-card-arrow">↗</div>
         </a>
-        <a class="app-btn live reveal" href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener">
-          <div class="btn-info"><strong>Section 16 — Dedicated Sports Shooter</strong><span>Firearm license application</span></div>
-          <div class="btn-arrow">↗</div>
+        <a class="app-card" data-key="s16s" href="https://tally.so/r/mJG5Oz" target="_blank" rel="noopener">
+          <span class="rivet"></span>
+          <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".6" fill="currentColor"/></svg></div>
+          <strong>Section 16 — Dedicated Sports Shooter</strong>
+          <span>Firearm license application</span>
+          <div class="app-card-arrow">↗</div>
         </a>
-        <a class="app-btn live reveal" href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener">
-          <div class="btn-info"><strong>Section 20 — Business Use</strong><span>Firearm license application</span></div>
-          <div class="btn-arrow">↗</div>
-        </a>
-        <a class="app-btn live reveal" href="https://tally.so/r/wA5D9W" target="_blank" rel="noopener">
-          <div class="btn-info"><strong>Competency Application</strong><span>Required competency certificate form</span></div>
-          <div class="btn-arrow">↗</div>
-        </a>
-        <a class="app-btn live reveal" href="https://tally.so/r/wayeoZ" target="_blank" rel="noopener">
-          <div class="btn-info"><strong>Firearm Renewal</strong><span>Renew an existing license</span></div>
-          <div class="btn-arrow">↗</div>
-        </a>
-        <a class="app-btn live reveal" href="https://tally.so/r/3l5eWk" target="_blank" rel="noopener">
-          <div class="btn-info"><strong>Testimony Application</strong><span>Supporting testimony form</span></div>
-          <div class="btn-arrow">↗</div>
-        </a>
-
-        <a class="app-btn plain reveal" href="https://jdbfirearmlicense.lovable.app/" target="_blank" rel="noopener">
-          <span style="font-size:.88rem;color:var(--muted);">Visit Our Official Website ↗</span>
+        <a class="app-card" data-key="s20" href="https://tally.so/r/wkp9Qo" target="_blank" rel="noopener">
+          <span class="rivet"></span>
+          <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="9" width="16" height="11" rx="1"/><path d="M8 9V6a4 4 0 018 0v3"/></svg></div>
+          <strong>Section 20 — Business Use</strong>
+          <span>Firearm license application</span>
+          <div class="app-card-arrow">↗</div>
         </a>
       </div>
     </div>
 
-    <aside class="side-card reveal" style="transition-delay:.22s">
-      <h4>Before You Start</h4>
-      <ul class="checklist">
-        <li><span class="check-icon">✓</span>Complete all required fields carefully</li>
-        <li><span class="check-icon">✓</span>Make sure you're using the correct application section</li>
-        <li><span class="check-icon">✓</span>Have your ID and relevant documents ready</li>
-        <li><span class="check-icon">✓</span>Submit only once all information is complete</li>
-      </ul>
+    <div class="app-group reveal" style="transition-delay:.16s">
+      <h3>Competency &amp; renewal</h3>
+      <div class="app-grid">
+        <a class="app-card" data-key="comp" href="https://tally.so/r/wA5D9W" target="_blank" rel="noopener">
+          <span class="rivet"></span>
+          <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <strong>Competency Application</strong>
+          <span>Required competency certificate form</span>
+          <div class="app-card-arrow">↗</div>
+        </a>
+        <a class="app-card" data-key="renew" href="https://tally.so/r/wayeoZ" target="_blank" rel="noopener">
+          <span class="rivet"></span>
+          <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 1 1 2.3 5.6"/><path d="M4 20v-5h5"/></svg></div>
+          <strong>Firearm Renewal</strong>
+          <span>Renew an existing license</span>
+          <div class="app-card-arrow">↗</div>
+        </a>
+      </div>
+    </div>
 
-      <a class="side-cta" href="https://wa.me/27785184118?text=Hi%20Johan%2C%20I'm%20interested%20in%20firearm%20license%20assistance" target="_blank" rel="noopener">
-        <div class="side-cta-icon">＋</div>
-        <div class="side-cta-text"><strong>Not sure which form?</strong><span>Message us on WhatsApp</span></div>
-      </a>
-    </aside>
+    <div class="app-group reveal" style="transition-delay:.22s">
+      <h3>Testimony</h3>
+      <div class="app-grid">
+        <a class="app-card" data-key="testimony" href="https://tally.so/r/3l5eWk" target="_blank" rel="noopener">
+          <span class="rivet"></span>
+          <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+          <strong>Testimony Application</strong>
+          <span>Supporting testimony form</span>
+          <div class="app-card-arrow">↗</div>
+        </a>
+        <a class="app-card" href="https://jdbfirearmlicense.lovable.app/" target="_blank" rel="noopener" style="align-items:center; justify-content:center; text-align:center;">
+          <span style="font-size:.88rem;color:var(--muted);">Visit our official website ↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY US ══ -->
+<section class="why-wrap">
+  <div class="why-bg" aria-hidden="true"></div>
+  <div class="section why-inner">
+    <div class="reveal">
+      <p class="section-label">Why clients choose us</p>
+      <h2 class="section-title">Built for accuracy the first time</h2>
+      <p class="section-sub">Rejected paperwork costs weeks. We build every application to survive scrutiny from your DFO the first time around.</p>
+    </div>
+
+    <div class="tags reveal" style="transition-delay:.1s">
+      <div class="tag-row">
+        <div class="tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div>
+          <h4>SAPS-compliant documentation</h4>
+          <p>Every motivation, competency and supporting document is drafted to match current SAPS requirements for your specific licence section.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <div class="tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <div>
+          <h4>Guided, not generic</h4>
+          <p>Our finder above and the WhatsApp line make sure you're on the correct form from the start, so you're not resubmitting later.</p>
+        </div>
+      </div>
+      <div class="tag-row">
+        <div class="tag-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <div>
+          <h4>A real person on WhatsApp</h4>
+          <p>Questions about a form or your application status go straight to our team, not a queue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section" id="faq">
+  <div class="reveal">
+    <p class="section-label">Questions</p>
+    <h2 class="section-title">Frequently asked</h2>
+  </div>
+
+  <div class="faq-list reveal" style="transition-delay:.1s">
+    <details class="faq-item">
+      <summary>Which section do I apply under?<span class="faq-plus"></span></summary>
+      <p>It depends on why you want the firearm — self-defence, hunting, sport shooting or business use each fall under a different section of the Firearms Control Act. Use the finder above, or message us on WhatsApp and we'll confirm the right one for you.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What documents do I need before I start?<span class="faq-plus"></span></summary>
+      <p>Have your South African ID and any documents relevant to your licence type (such as competency certificates or club membership) on hand. The form you select will list exactly what's required for that category.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How long does the SAPS process take?<span class="faq-plus"></span></summary>
+      <p>Processing time is set by SAPS and varies by province, station and licence type, so we can't promise a fixed date. Once your application is lodged, we follow up on your behalf and keep you posted on progress.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can I apply if my existing licence has already expired?<span class="faq-plus"></span></summary>
+      <p>Renewal applications are handled through the Firearm Renewal form. If your licence has already lapsed, message us on WhatsApp first — the process differs slightly depending on how long it's been expired.</p>
+    </details>
   </div>
 </section>
 
@@ -432,11 +725,7 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
 (function(){
   const motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* stagger delay for app-btn reveal */
-  document.querySelectorAll('.app-list .app-btn.reveal').forEach((el, i) => {
-    el.style.transitionDelay = (i * 0.07) + 's';
-  });
-
+  /* ── scroll reveal ── */
   const revealEls = document.querySelectorAll('.reveal');
   if (motionOk && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
@@ -447,7 +736,7 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
     revealEls.forEach(el => el.classList.add('in-view'));
   }
 
-  /* count-up stats */
+  /* ── count-up stats ── */
   const statNums = document.querySelectorAll('.stat-num');
   const animateCount = (el) => {
     const target = parseFloat(el.dataset.target);
@@ -474,34 +763,36 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
     }
   }
 
-  /* magnetic hover on application cards */
+  /* ── timeline draw-in ── */
+  const track = document.getElementById('timelineTrack');
+  const fill = document.getElementById('timelineFill');
+  if (track && fill) {
+    if (motionOk && 'IntersectionObserver' in window) {
+      const tIo = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { fill.style.height = '100%'; tIo.unobserve(e.target); }
+        });
+      }, { threshold: 0.2 });
+      tIo.observe(track);
+    } else {
+      fill.style.height = '100%';
+    }
+  }
+
+  /* ── magnetic hover on application cards ── */
   if (motionOk) {
-    document.querySelectorAll('.app-btn.live').forEach(el => {
+    document.querySelectorAll('.app-card').forEach(el => {
       el.addEventListener('mousemove', (e) => {
         const rect = el.getBoundingClientRect();
         const relX = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
         const relY = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
-        el.style.transform = `translate(${relX * 5}px, ${relY * 5}px) rotateX(${relY * -3}deg) rotateY(${relX * 3}deg)`;
+        el.style.transform = `translate(${relX * 4}px, ${relY * 4}px) translateY(-3px)`;
       });
       el.addEventListener('mouseleave', () => { el.style.transform = ''; });
     });
   }
 
-  if (motionOk) {
-    const heroBg = document.querySelector('.hero-bg');
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const y = window.scrollY;
-          if (heroBg) heroBg.style.transform = `scale(1.08) translateY(${y * 0.18}px)`;
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
-  }
-
+  /* ── background particles ── */
   if (motionOk) {
     const layer = document.createElement('div');
     layer.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:0;';
@@ -509,8 +800,8 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
     for (let i = 0; i < 20; i++) {
       const p = document.createElement('div');
       const size = (Math.random() * 2.4 + 0.8).toFixed(1) + 'px';
-      const gold = Math.random() > 0.5;
-      p.style.cssText = `position:absolute;width:${size};height:${size};border-radius:50%;background:${gold ? 'rgba(201,162,77,0.4)' : 'rgba(77,127,196,0.3)'};left:${(Math.random()*100).toFixed(1)}vw;top:${(Math.random()*100).toFixed(1)}vh;`;
+      const brass = Math.random() > 0.5;
+      p.style.cssText = `position:absolute;width:${size};height:${size};border-radius:50%;background:${brass ? 'rgba(201,133,63,0.42)' : 'rgba(92,109,128,0.32)'};left:${(Math.random()*100).toFixed(1)}vw;top:${(Math.random()*100).toFixed(1)}vh;`;
       layer.appendChild(p);
       const dur = Math.random() * 14000 + 12000;
       const dx = (Math.random() * 100 - 50);
@@ -521,6 +812,60 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
         { transform: 'translate(0,0) scale(1)', opacity: .06 }
       ], { duration: dur, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
     }
+  }
+
+  /* ═══ LICENCE FINDER WIZARD ═══ */
+  const wizard = document.querySelector('.wizard-panel');
+  if (wizard) {
+    const steps = wizard.querySelectorAll('.w-step');
+    const dots = wizard.querySelectorAll('.wp-dot');
+    const depthMap = { start: 0, purpose: 1, hunting: 2, sport: 2, result: 3 };
+
+    const results = {
+      s13:      { title: 'Section 13 — Self-Defence',                   desc: 'Firearm license for self-defense.',                         url: 'https://tally.so/r/wogW1b', key: 's13' },
+      s15:      { title: 'Section 15 — Occasional Hunting & Shooting',   desc: 'Firearm license application.',                              url: 'https://tally.so/r/w82OJA', key: 's15' },
+      s16h:     { title: 'Section 16 — Dedicated Hunter',                desc: 'Firearm license application.',                              url: 'https://tally.so/r/wMPoX0', key: 's16h' },
+      s16s:     { title: 'Section 16 — Dedicated Sports Shooter',        desc: 'Firearm license application.',                              url: 'https://tally.so/r/mJG5Oz', key: 's16s' },
+      s20:      { title: 'Section 20 — Business Use',                    desc: 'Firearm license application.',                              url: 'https://tally.so/r/wkp9Qo', key: 's20' },
+      comp:     { title: 'Competency Application',                       desc: 'Required competency certificate form.',                     url: 'https://tally.so/r/wA5D9W', key: 'comp' },
+      renew:    { title: 'Firearm Renewal',                              desc: 'Renew an existing license.',                                url: 'https://tally.so/r/wayeoZ', key: 'renew' },
+      testimony:{ title: 'Testimony Application',                        desc: 'Supporting testimony form.',                                url: 'https://tally.so/r/3l5eWk', key: 'testimony' }
+    };
+
+    function showStep(name) {
+      steps.forEach(s => s.classList.toggle('active', s.dataset.step === name));
+      const depth = depthMap[name] || 0;
+      dots.forEach((d, i) => d.classList.toggle('done', i < depth || (name === 'result' && i <= 2)));
+    }
+
+    wizard.addEventListener('click', (e) => {
+      const gotoBtn = e.target.closest('[data-goto]');
+      const backBtn = e.target.closest('[data-back]');
+      const resultBtn = e.target.closest('[data-result]');
+
+      if (gotoBtn) { showStep(gotoBtn.dataset.goto); return; }
+      if (backBtn) { showStep(backBtn.dataset.back); return; }
+      if (resultBtn) {
+        const r = results[resultBtn.dataset.result];
+        if (!r) return;
+        document.getElementById('wResultTitle').textContent = r.title;
+        document.getElementById('wResultDesc').textContent = r.desc;
+        const link = document.getElementById('wResultLink');
+        link.href = r.url;
+        showStep('result');
+
+        const card = document.querySelector(`.app-card[data-key="${r.key}"]`);
+        if (card) {
+          setTimeout(() => {
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.classList.add('pulse');
+            setTimeout(() => card.classList.remove('pulse'), 3300);
+          }, 500);
+        }
+      }
+    });
+
+    showStep('start');
   }
 })();
 </script>
