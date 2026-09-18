@@ -94,6 +94,18 @@ body::after{
   pointer-events:none; z-index:999; opacity:.55;
 }
 
+.page-bg{
+  position:fixed; inset:0; z-index:-4;
+  background:url('https://raw.githubusercontent.com/johandebeer21/digital-license-assist-method/main/contrast-gun-metal-background-photo.jpg') center 38% / cover no-repeat;
+  filter:grayscale(.5) brightness(.34) contrast(1.15) saturate(.85);
+  opacity:.7;
+}
+.page-bg-overlay{
+  position:fixed; inset:0; z-index:-3;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(201,133,63,.06), transparent 60%),
+    linear-gradient(180deg, rgba(10,12,15,.5) 0%, rgba(10,12,15,.82) 38%, rgba(10,12,15,.96) 100%);
+}
 .orb{ position:fixed; border-radius:50%; pointer-events:none; z-index:-1; filter:blur(100px); animation:drift 24s ease-in-out infinite alternate; }
 .orb-1{ width:640px;height:640px; top:-220px; left:-160px; background:radial-gradient(circle, rgba(201,133,63,.09), transparent 70%); }
 .orb-2{ width:520px;height:520px; top:30%; right:-180px; background:radial-gradient(circle, rgba(92,109,128,.12), transparent 70%); animation-delay:-9s; }
@@ -283,6 +295,15 @@ body::after{
 .app-card-arrow{ margin-top:auto; align-self:flex-end; width:30px; height:30px; border-radius:50%; display:grid; place-items:center; background:rgba(201,133,63,.1); border:1px solid rgba(201,133,63,.22); color:var(--brass-light); font-size:.9rem; transition:transform .2s ease, background .2s ease; }
 .app-card:hover .app-card-arrow{ transform:rotate(45deg); background:rgba(201,133,63,.22); }
 
+.app-card.tracker{ border-color:rgba(92,109,128,.34); background:linear-gradient(160deg, rgba(92,109,128,.11) 0%, rgba(92,109,128,.03) 100%); }
+.app-card.tracker:hover{ border-color:rgba(92,109,128,.58); box-shadow:0 14px 32px rgba(92,109,128,.18); }
+.app-card.tracker .app-card-icon{ color:var(--steel-light); }
+.app-card.tracker .app-card-arrow{ background:rgba(92,109,128,.15); border-color:rgba(92,109,128,.3); color:var(--steel-light); }
+.app-card.tracker:hover .app-card-arrow{ background:rgba(92,109,128,.28); }
+.tracker-badge{ display:inline-flex; align-items:center; gap:6px; font-size:.72rem; color:var(--steel-light); }
+.tracker-dot{ width:6px; height:6px; border-radius:50%; background:var(--steel-light); animation:livePulse 2.2s ease infinite; }
+@keyframes livePulse{ 0%,100%{ opacity:1; } 50%{ opacity:.3; } }
+
 /* ══ WHY US ══ */
 .why-wrap{ position:relative; background:var(--bg-2); border-top:1px solid var(--border); border-bottom:1px solid var(--border); overflow:hidden; }
 .why-bg{
@@ -369,6 +390,8 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
 </head>
 <body>
 
+<div class="page-bg" aria-hidden="true"></div>
+<div class="page-bg-overlay" aria-hidden="true"></div>
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
 <div class="orb orb-3"></div>
@@ -386,6 +409,7 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
     <div class="topbar-right">
       <a class="top-btn" href="#finder">Find My Licence</a>
       <a class="top-btn" href="#applications">Applications</a>
+      <a class="top-btn" href="https://johandebeer21.github.io/JDBFL_Application_Tracker/" target="_blank" rel="noopener">Track Application</a>
       <a class="top-btn" href="#faq">FAQ</a>
       <a class="top-btn accent" href="https://jdbfirearmlicense.lovable.app/" target="_blank" rel="noopener">Website ↗</a>
     </div>
@@ -400,7 +424,7 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
   <div class="hero-content">
     <div class="hero-copy">
       <div class="kicker"><span class="kicker-dot"></span>Application Portal</div>
-      <h1>Your firearm license,<br><span class="line2">done properly.</span></h1>
+      <h1>Your trusted partner<br><span class="line2">in firearm licensing.</span></h1>
       <p class="hero-sub">Fast-tracking Section 13, 15, 16 and 20 applications, competency, renewals and testimonies with SAPS-compliant documents — start with the correct form below and our team handles the rest.</p>
       <div class="hero-actions">
         <a class="cta-primary" href="https://tally.so/r/wogW1b" target="_blank" rel="noopener">Start Section 13 Application <span>→</span></a>
@@ -507,6 +531,8 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
         </div>
       </div>
     </div>
+
+    <p class="reveal" style="transition-delay:.16s; margin-top:18px; color:var(--muted); font-size:.88rem;">Already submitted an application? <a href="https://johandebeer21.github.io/JDBFL_Application_Tracker/" target="_blank" rel="noopener" style="color:var(--steel-light); text-decoration:underline; text-underline-offset:3px;">Track its status here ↗</a></p>
   </div>
 </section>
 
@@ -552,6 +578,20 @@ footer{ padding:56px 24px 36px; border-top:1px solid var(--border); background:l
   </div>
 
   <div class="app-groups">
+    <div class="app-group reveal" style="transition-delay:.06s">
+      <h3>Client tools</h3>
+      <div class="app-grid">
+        <a class="app-card tracker" href="https://johandebeer21.github.io/JDBFL_Application_Tracker/" target="_blank" rel="noopener">
+          <span class="rivet"></span>
+          <div class="tracker-badge"><span class="tracker-dot"></span> Live</div>
+          <div class="app-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <strong>Application Tracker</strong>
+          <span>Check your status by name &amp; surname, or ID number</span>
+          <div class="app-card-arrow">↗</div>
+        </a>
+      </div>
+    </div>
+
     <div class="app-group reveal" style="transition-delay:.1s">
       <h3>New licence applications</h3>
       <div class="app-grid">
